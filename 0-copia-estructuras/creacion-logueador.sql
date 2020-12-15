@@ -21,7 +21,7 @@ create or replace function log_procesos(
 returns boolean
 as $$
 begin
-    insert into log_de_procesos(nombre_proceso,comentario,cantidad_registros,correcto,fec_inicio,fec_fin) values(
+    insert into stage.log_de_procesos(nombre_proceso,comentario,cantidad_registros,correcto,fec_inicio,fec_fin) values(
       nombre_proceso,
       comentario,
       cantidad_registros,

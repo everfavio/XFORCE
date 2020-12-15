@@ -19,10 +19,12 @@ BEGIN
 
 	
 	EXECUTE IMMEDIATE 'TRUNCATE TABLE STG_SUBRUBROS';
-    INSERT /*+ NOLOGGING APPEND*/  INTO STG_SUBRUBROS (id_rubro, id_subrubro, nom_subrubro)
-    SELECT id_rubro, id_subrubro, nom_subrubro FROM distribuidor.SUBRUBROS;
+    INSERT /*+ NOLOGGING APPEND*/  
+    INTO STG_SUBRUBROS (id_rubro, id_subrubro, nom_subrubro)
+    SELECT id_rubro, id_subrubro, nom_subrubro 
+    FROM distribuidor.SUBRUBROS;
     V_CANT_REG:= SQL%ROWCOUNT;
-    COMMIT;
+    COMMIT; 
   
 	
   -- FIN CODIGO DEL PROCESO
