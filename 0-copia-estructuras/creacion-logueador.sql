@@ -10,8 +10,6 @@ CREATE TABLE  log_de_procesos
      cantidad_registros int4,
      correcto boolean);
 
-
-
 create or replace function log_procesos(
   nombre_proceso varchar,
   comentario varchar,
