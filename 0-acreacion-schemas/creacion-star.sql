@@ -15,7 +15,7 @@ CREATE TABLE dim_cliente(
     pais               varchar(100)    NOT NULL,
     fecha_inicio       date            NOT NULL,
     fecha_fin          date,
-    vigente            bit(10)         NOT NULL,
+    vigente            boolean         NOT NULL,
     CONSTRAINT "PK1_3" PRIMARY KEY (idw_cliente)
 )
 ;
@@ -37,7 +37,7 @@ CREATE TABLE dim_empleado(
     pais               varchar(100)    NOT NULL,
     fecha_inicio       date            NOT NULL,
     fecha_fin          date,
-    vigente            bit(10)         NOT NULL,
+    vigente            boolean         NOT NULL,
     CONSTRAINT "PK1_3_1" PRIMARY KEY (idw_empleado)
 )
 ;
@@ -55,7 +55,7 @@ CREATE TABLE dim_geografia(
     pais             varchar(100)    NOT NULL,
     fecha_inicio     date            NOT NULL,
     fecha_fin        date,
-    vigente          bit(10)         NOT NULL,
+    vigente          boolean         NOT NULL,
     CONSTRAINT "PK1" PRIMARY KEY (idw_geografia)
 )
 ;
@@ -82,7 +82,7 @@ CREATE TABLE dim_producto(
     nombre_contacto     varchar(100),
     fecha_inicio        date              NOT NULL,
     fecha_fin           date,
-    vigente             bit(10)           NOT NULL,
+    vigente             boolean           NOT NULL,
     CONSTRAINT "PK1_1" PRIMARY KEY (idw_producto)
 )
 ;
@@ -102,7 +102,7 @@ CREATE TABLE dim_repartidor(
     pais              varchar(100)    NOT NULL,
     fecha_inicio      date            NOT NULL,
     fecha_fin         date,
-    vigente           bit(10)         NOT NULL,
+    vigente           boolean         NOT NULL,
     CONSTRAINT "PK1_3_2" PRIMARY KEY (idw_repartidor)
 )
 ;
@@ -126,7 +126,7 @@ CREATE TABLE dim_tiempo(
     bimestre           int4,
     fecha_inicio       date       NOT NULL,
     fecha_fin          date,
-    vigente            bit(10)    NOT NULL,
+    vigente            boolean    NOT NULL,
     CONSTRAINT "PK1_2" PRIMARY KEY (idw_tiempo)
 )
 ;

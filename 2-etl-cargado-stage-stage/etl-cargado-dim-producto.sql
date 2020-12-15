@@ -2,7 +2,8 @@
 SET search_path TO stage;
 ALTER database xforce_orders_online SET search_path TO stage;
 -- creando la funcion
-create or replace function one_etl_stage_suppliers()
+
+create or replace function two_etl_stage_dim_producto()
 returns boolean
 as $$ 
   --para errores
@@ -15,7 +16,7 @@ as $$
   declare error_table_name text;
   declare error_pg_exception_detail text;
   declare error_pg_exception_hint text;
-  -- para el logueador
+    -- para el logueador
   declare nombre_proceso varchar;
   declare fecha_inicio timestamp;
   declare fecha_fin timestamp;
@@ -25,37 +26,57 @@ as $$
   --body del procediiento
   BEGIN
     fecha_inicio = now()::timestamp;
-    nombre_proceso = 'one_etl_stage_suppliers';
+    nombre_proceso = 'one_etl_stage_dim_producto';
     cantidad_registros = 0;
     -- limpieza de suppliers
-    truncate table  stage_trans_suppliers;
-    insert into stage_trans_suppliers (
-       supplierid  ,
-       companyname ,
-       contactname ,
-       contacttitle,
-       address     ,
-       city        ,
-       region      ,
-       postalcode  ,
-       country     ,
-       phone       ,
-       fax
+    truncate table  stage_star_dim_producto;
+    insert into stage_star_dim_producto (
+      idw_producto     ,
+      id_producto      ,
+      nombre_producto  ,
+      precio_unitario  ,
+      cantidad_unidad  ,
+      id_categoria     ,
+      categoria        ,
+      id_proveedor     ,
+      proveedor        ,
+      ciudad_proveedor ,
+      pais_proveedor   ,
+      region_proveedor ,
+      nombre_contacto  ,
+      fecha_inicio     ,
+      fecha_fin        ,
+      vigente         
     )
     select 
-       supplierid  ,
-       companyname ,
-       contactname ,
-       contacttitle,
-       address     ,
-       city        ,
-       region      ,
-       postalcode  ,
-       country     ,
-       phone       ,
-       fax
+    coalesce(
+      (select idw_producto
+      from star.dim_producto
+      where id_producto = stp.productid
+      and id_categoria = stp.categoryid
+      and id_proveedor = stp.supplierid
+    ), -1 ) idw_producto,
+    stp.productid,
+    stp.productname,
+    stp.unitprice,
+    -- cast (stp.quantityperunit as integer) quantityperunit,
+    12,
+    stp.categoryid,
+    stc.categoryname,
+    stp.supplierid,
+    sts.companyname,
+    sts.city,
+    sts.country,
+    sts.region,
+    sts.contactname,
+    now() fecha_inicio,
+    now() fecha_final,
+    true vigente
     from
-      public.suppliers;    
+      stage_trans_products stp
+      inner join stage_trans_categories stc on stc.categoryid = stp.categoryid
+      inner join stage_trans_suppliers sts on sts.supplierid = stp.supplierid;    
+    -- 
     GET DIAGNOSTICS cantidad_registros = ROW_COUNT;
     fecha_fin = now()::timestamp;
     comentario = FORMAT('El proceso %s termino correctamente', nombre_proceso);
@@ -84,4 +105,6 @@ as $$
   END;
 $$ language plpgsql;
 
-
+-- select two_etl_stage_dim_producto()
+-- select * from stage_star_dim_producto;
+-- select * from log_de_procesos;
