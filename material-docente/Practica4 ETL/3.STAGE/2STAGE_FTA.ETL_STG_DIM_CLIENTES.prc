@@ -16,7 +16,6 @@ BEGIN
   v_fec_inicio := SYSDATE;
 
   -- CODIGO DEL PROCESO
-
  
     EXECUTE IMMEDIATE 'TRUNCATE TABLE STG_DIM_CLIENTES';
     
@@ -82,3 +81,5 @@ EXCEPTION
 
 
 END;
+\dt stage.*
+\d stage.stage_star_dim_cliente
