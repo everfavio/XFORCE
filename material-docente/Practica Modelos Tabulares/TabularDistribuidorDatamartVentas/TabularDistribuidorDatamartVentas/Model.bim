@@ -1,0 +1,797 @@
+{
+  "name": "SemanticModel",
+  "compatibilityLevel": 1200,
+  "model": {
+    "culture": "en-US",
+    "dataSources": [
+      {
+        "name": "SqlServer DESKTOP-JOVNFHT star2",
+        "connectionString": "Provider=SQLNCLI11;Data Source=DESKTOP-JOVNFHT;Initial Catalog=star2;User ID=sa;Persist Security Info=false",
+        "impersonationMode": "impersonateAccount",
+        "account": "Nandex",
+        "annotations": [
+          {
+            "name": "ConnectionEditUISource",
+            "value": "SqlServer"
+          }
+        ]
+      }
+    ],
+    "tables": [
+      {
+        "name": "DIM_CLIENTE",
+        "columns": [
+          {
+            "name": "IDW_CLIENTE",
+            "dataType": "double",
+            "sourceColumn": "IDW_CLIENTE",
+            "sourceProviderType": "Numeric"
+          },
+          {
+            "name": "ID_CLIENTE",
+            "dataType": "double",
+            "sourceColumn": "ID_CLIENTE",
+            "sourceProviderType": "Numeric"
+          },
+          {
+            "name": "NOMBRE",
+            "dataType": "string",
+            "sourceColumn": "NOMBRE",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "AP_PATERNO",
+            "dataType": "string",
+            "sourceColumn": "AP_PATERNO",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "AP_MATERNO",
+            "dataType": "string",
+            "sourceColumn": "AP_MATERNO",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "TELEFONO",
+            "dataType": "string",
+            "sourceColumn": "TELEFONO",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "CELULAR",
+            "dataType": "string",
+            "sourceColumn": "CELULAR",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "CI",
+            "dataType": "string",
+            "sourceColumn": "CI",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "ID_SUBRUBRO",
+            "dataType": "double",
+            "sourceColumn": "ID_SUBRUBRO",
+            "sourceProviderType": "Numeric"
+          },
+          {
+            "name": "TIPO_CLIENTE",
+            "dataType": "string",
+            "sourceColumn": "TIPO_CLIENTE",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "SUB_RUBRO",
+            "dataType": "string",
+            "sourceColumn": "SUB_RUBRO",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "ID_RUBRO",
+            "dataType": "double",
+            "sourceColumn": "ID_RUBRO",
+            "sourceProviderType": "Numeric"
+          },
+          {
+            "name": "RUBRO",
+            "dataType": "string",
+            "sourceColumn": "RUBRO",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "FECHA_UPDATE",
+            "dataType": "dateTime",
+            "sourceColumn": "FECHA_UPDATE",
+            "formatString": "General Date",
+            "sourceProviderType": "DBDate"
+          },
+          {
+            "name": "FECHA_INSERT",
+            "dataType": "dateTime",
+            "sourceColumn": "FECHA_INSERT",
+            "formatString": "General Date",
+            "sourceProviderType": "DBDate"
+          },
+          {
+            "name": "ID_SOURCE",
+            "dataType": "double",
+            "sourceColumn": "ID_SOURCE",
+            "sourceProviderType": "Numeric"
+          },
+          {
+            "name": "SOURCE",
+            "dataType": "string",
+            "sourceColumn": "SOURCE",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "ESTADO",
+            "dataType": "double",
+            "sourceColumn": "ESTADO",
+            "sourceProviderType": "Numeric"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "DIM_CLIENTE",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " SELECT [STAR2].[DIM_CLIENTE].* FROM [STAR2].[DIM_CLIENTE] ",
+              "dataSource": "SqlServer DESKTOP-JOVNFHT star2"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [STAR2].[DIM_CLIENTE].* FROM [STAR2].[DIM_CLIENTE] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "DIM_CLIENTE"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "STAR2"
+          }
+        ]
+      },
+      {
+        "name": "DIM_GEOGRAFIA",
+        "columns": [
+          {
+            "name": "IDW_GEOGRAFIA",
+            "dataType": "double",
+            "sourceColumn": "IDW_GEOGRAFIA",
+            "sourceProviderType": "Numeric"
+          },
+          {
+            "name": "ID_CIUDAD",
+            "dataType": "double",
+            "sourceColumn": "ID_CIUDAD",
+            "sourceProviderType": "Numeric"
+          },
+          {
+            "name": "CIUDAD",
+            "dataType": "string",
+            "sourceColumn": "CIUDAD",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "ID_DEPTO",
+            "dataType": "double",
+            "sourceColumn": "ID_DEPTO",
+            "sourceProviderType": "Numeric"
+          },
+          {
+            "name": "NOMBRE_DEPTO",
+            "dataType": "string",
+            "sourceColumn": "NOMBRE_DEPTO",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "FECHA_INSERT",
+            "dataType": "dateTime",
+            "sourceColumn": "FECHA_INSERT",
+            "formatString": "General Date",
+            "sourceProviderType": "DBDate"
+          },
+          {
+            "name": "FECHA_UPDATE",
+            "dataType": "dateTime",
+            "sourceColumn": "FECHA_UPDATE",
+            "formatString": "General Date",
+            "sourceProviderType": "DBDate"
+          },
+          {
+            "name": "ID_SOURCE",
+            "dataType": "double",
+            "sourceColumn": "ID_SOURCE",
+            "sourceProviderType": "Numeric"
+          },
+          {
+            "name": "SOURCE",
+            "dataType": "string",
+            "sourceColumn": "SOURCE",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "ESTADO",
+            "dataType": "double",
+            "sourceColumn": "ESTADO",
+            "sourceProviderType": "Numeric"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "DIM_GEOGRAFIA",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " SELECT [STAR2].[DIM_GEOGRAFIA].* FROM [STAR2].[DIM_GEOGRAFIA] ",
+              "dataSource": "SqlServer DESKTOP-JOVNFHT star2"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [STAR2].[DIM_GEOGRAFIA].* FROM [STAR2].[DIM_GEOGRAFIA] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "DIM_GEOGRAFIA"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "STAR2"
+          }
+        ]
+      },
+      {
+        "name": "DIM_HORA",
+        "columns": [
+          {
+            "name": "IDW_HORA",
+            "dataType": "string",
+            "sourceColumn": "IDW_HORA",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "TURNO",
+            "dataType": "string",
+            "sourceColumn": "TURNO",
+            "sourceProviderType": "WChar"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "DIM_HORA",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " SELECT [STAR2].[DIM_HORA].* FROM [STAR2].[DIM_HORA] ",
+              "dataSource": "SqlServer DESKTOP-JOVNFHT star2"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [STAR2].[DIM_HORA].* FROM [STAR2].[DIM_HORA] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "DIM_HORA"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "STAR2"
+          }
+        ]
+      },
+      {
+        "name": "DIM_PRODUCTO",
+        "columns": [
+          {
+            "name": "IDW_PRODUCTO",
+            "dataType": "double",
+            "sourceColumn": "IDW_PRODUCTO",
+            "sourceProviderType": "Numeric"
+          },
+          {
+            "name": "ID_PRESENTACIONES",
+            "dataType": "double",
+            "sourceColumn": "ID_PRESENTACIONES",
+            "sourceProviderType": "Numeric"
+          },
+          {
+            "name": "PRESENTACIONES",
+            "dataType": "string",
+            "sourceColumn": "PRESENTACIONES",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "ID_PRODUCTO",
+            "dataType": "double",
+            "sourceColumn": "ID_PRODUCTO",
+            "sourceProviderType": "Numeric"
+          },
+          {
+            "name": "PRODUCTO",
+            "dataType": "string",
+            "sourceColumn": "PRODUCTO",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "FAMILIA",
+            "dataType": "string",
+            "sourceColumn": "FAMILIA",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "DURACION",
+            "dataType": "string",
+            "sourceColumn": "DURACION",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "TAMANIO",
+            "dataType": "string",
+            "sourceColumn": "TAMANIO",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "FECHA_UPDATE",
+            "dataType": "dateTime",
+            "sourceColumn": "FECHA_UPDATE",
+            "formatString": "General Date",
+            "sourceProviderType": "DBDate"
+          },
+          {
+            "name": "FECHA_INSERT",
+            "dataType": "dateTime",
+            "sourceColumn": "FECHA_INSERT",
+            "formatString": "General Date",
+            "sourceProviderType": "DBDate"
+          },
+          {
+            "name": "ID_SOURCE",
+            "dataType": "double",
+            "sourceColumn": "ID_SOURCE",
+            "sourceProviderType": "Numeric"
+          },
+          {
+            "name": "SOURCE",
+            "dataType": "string",
+            "sourceColumn": "SOURCE",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "ESTADO",
+            "dataType": "double",
+            "sourceColumn": "ESTADO",
+            "sourceProviderType": "Numeric"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "DIM_PRODUCTO",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " SELECT [STAR2].[DIM_PRODUCTO].* FROM [STAR2].[DIM_PRODUCTO] ",
+              "dataSource": "SqlServer DESKTOP-JOVNFHT star2"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [STAR2].[DIM_PRODUCTO].* FROM [STAR2].[DIM_PRODUCTO] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "DIM_PRODUCTO"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "STAR2"
+          }
+        ]
+      },
+      {
+        "name": "DIM_TIEMPO",
+        "columns": [
+          {
+            "name": "FECHA",
+            "dataType": "dateTime",
+            "sourceColumn": "FECHA",
+            "formatString": "General Date",
+            "sourceProviderType": "DBDate"
+          },
+          {
+            "name": "DIA",
+            "dataType": "string",
+            "sourceColumn": "DIA",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "DIA_SEMANA",
+            "dataType": "string",
+            "sourceColumn": "DIA_SEMANA",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "SEMANA_MES",
+            "dataType": "double",
+            "sourceColumn": "SEMANA_MES",
+            "sourceProviderType": "Numeric"
+          },
+          {
+            "name": "FIN_SEMANA",
+            "dataType": "string",
+            "sourceColumn": "FIN_SEMANA",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "DIAS_LABORALES",
+            "dataType": "string",
+            "sourceColumn": "DIAS_LABORALES",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "DIAS_FERIADOS",
+            "dataType": "string",
+            "sourceColumn": "DIAS_FERIADOS",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "SEMANA_ANIO",
+            "dataType": "double",
+            "sourceColumn": "SEMANA_ANIO",
+            "sourceProviderType": "Numeric"
+          },
+          {
+            "name": "MES",
+            "dataType": "double",
+            "sourceColumn": "MES",
+            "sourceProviderType": "Numeric"
+          },
+          {
+            "name": "MES_NOMBRE",
+            "dataType": "string",
+            "sourceColumn": "MES_NOMBRE",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "PERIODO",
+            "dataType": "string",
+            "sourceColumn": "PERIODO",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "TRIMESTRE",
+            "dataType": "string",
+            "sourceColumn": "TRIMESTRE",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "SEMESTRE",
+            "dataType": "double",
+            "sourceColumn": "SEMESTRE",
+            "sourceProviderType": "Numeric"
+          },
+          {
+            "name": "ANIO",
+            "dataType": "string",
+            "sourceColumn": "ANIO",
+            "sourceProviderType": "WChar"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "DIM_TIEMPO",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " SELECT [STAR2].[DIM_TIEMPO].* FROM [STAR2].[DIM_TIEMPO] ",
+              "dataSource": "SqlServer DESKTOP-JOVNFHT star2"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [STAR2].[DIM_TIEMPO].* FROM [STAR2].[DIM_TIEMPO] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "DIM_TIEMPO"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "STAR2"
+          }
+        ]
+      },
+      {
+        "name": "DIM_TIPOVENTA",
+        "columns": [
+          {
+            "name": "IDW_TIPOVENTA",
+            "dataType": "double",
+            "sourceColumn": "IDW_TIPOVENTA",
+            "sourceProviderType": "Numeric"
+          },
+          {
+            "name": "TIPOVENTA",
+            "dataType": "string",
+            "sourceColumn": "TIPOVENTA",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "FECHA_UPDATE",
+            "dataType": "dateTime",
+            "sourceColumn": "FECHA_UPDATE",
+            "formatString": "General Date",
+            "sourceProviderType": "DBDate"
+          },
+          {
+            "name": "FECHA_INSERT",
+            "dataType": "dateTime",
+            "sourceColumn": "FECHA_INSERT",
+            "formatString": "General Date",
+            "sourceProviderType": "DBDate"
+          },
+          {
+            "name": "ID_SOURCE",
+            "dataType": "double",
+            "sourceColumn": "ID_SOURCE",
+            "sourceProviderType": "Numeric"
+          },
+          {
+            "name": "SOURCE",
+            "dataType": "string",
+            "sourceColumn": "SOURCE",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "ESTADO",
+            "dataType": "double",
+            "sourceColumn": "ESTADO",
+            "sourceProviderType": "Numeric"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "DIM_TIPOVENTA",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " SELECT [STAR2].[DIM_TIPOVENTA].* FROM [STAR2].[DIM_TIPOVENTA] ",
+              "dataSource": "SqlServer DESKTOP-JOVNFHT star2"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [STAR2].[DIM_TIPOVENTA].* FROM [STAR2].[DIM_TIPOVENTA] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "DIM_TIPOVENTA"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "STAR2"
+          }
+        ]
+      },
+      {
+        "name": "FACT_VENTA",
+        "columns": [
+          {
+            "name": "IDW_PRODUCTO",
+            "dataType": "double",
+            "sourceColumn": "IDW_PRODUCTO",
+            "sourceProviderType": "Numeric"
+          },
+          {
+            "name": "IDW_GEOGRAFIA",
+            "dataType": "double",
+            "sourceColumn": "IDW_GEOGRAFIA",
+            "sourceProviderType": "Numeric"
+          },
+          {
+            "name": "IDW_CLIENTE",
+            "dataType": "double",
+            "sourceColumn": "IDW_CLIENTE",
+            "sourceProviderType": "Numeric"
+          },
+          {
+            "name": "IDW_HORA",
+            "dataType": "string",
+            "sourceColumn": "IDW_HORA",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "FECHA",
+            "dataType": "dateTime",
+            "sourceColumn": "FECHA",
+            "formatString": "General Date",
+            "sourceProviderType": "DBDate"
+          },
+          {
+            "name": "IDW_TIPOVENTA",
+            "dataType": "double",
+            "sourceColumn": "IDW_TIPOVENTA",
+            "sourceProviderType": "Numeric"
+          },
+          {
+            "name": "PERIODO",
+            "dataType": "double",
+            "sourceColumn": "PERIODO",
+            "sourceProviderType": "Numeric"
+          },
+          {
+            "name": "FECHA_COMPLETA",
+            "dataType": "dateTime",
+            "sourceColumn": "FECHA_COMPLETA",
+            "formatString": "General Date",
+            "sourceProviderType": "DBDate"
+          },
+          {
+            "name": "IMPORTE",
+            "dataType": "double",
+            "sourceColumn": "IMPORTE",
+            "sourceProviderType": "Numeric"
+          },
+          {
+            "name": "COSTO",
+            "dataType": "double",
+            "sourceColumn": "COSTO",
+            "sourceProviderType": "Numeric"
+          },
+          {
+            "name": "CANTIDAD",
+            "dataType": "double",
+            "sourceColumn": "CANTIDAD",
+            "sourceProviderType": "Numeric"
+          },
+          {
+            "name": "STOCK_UNIDADES",
+            "dataType": "double",
+            "sourceColumn": "STOCK_UNIDADES",
+            "sourceProviderType": "Numeric"
+          },
+          {
+            "name": "STOCK_PESOS",
+            "dataType": "double",
+            "sourceColumn": "STOCK_PESOS",
+            "sourceProviderType": "Numeric"
+          },
+          {
+            "name": "FECHA_CARGA",
+            "dataType": "dateTime",
+            "sourceColumn": "FECHA_CARGA",
+            "formatString": "General Date",
+            "sourceProviderType": "DBDate"
+          },
+          {
+            "name": "USUARIO",
+            "dataType": "string",
+            "sourceColumn": "USUARIO",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "FUENTE",
+            "dataType": "string",
+            "sourceColumn": "FUENTE",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "type": "calculated",
+            "name": "ImporteM",
+            "dataType": "double",
+            "isDataTypeInferred": true,
+            "expression": "[IMPORTE]*[CANTIDAD]"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "FACT_VENTA",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " SELECT [STAR2].[FACT_VENTA].* FROM [STAR2].[FACT_VENTA] ",
+              "dataSource": "SqlServer DESKTOP-JOVNFHT star2"
+            }
+          }
+        ],
+        "measures": [
+          {
+            "name": "Sum of IMPORTE",
+            "expression": "SUM([IMPORTE])"
+          },
+          {
+            "name": "Measure 1",
+            "expression": "CALCULATE(sum([IMPORTE]),FACT_VENTA[IDW_GEOGRAFIA] =96)"
+          },
+          {
+            "name": "Measure 2",
+            "expression": "DISTINCTCOUNT(DIM_CLIENTE[IDW_CLIENTE])"
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [STAR2].[FACT_VENTA].* FROM [STAR2].[FACT_VENTA] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "FACT_VENTA"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "STAR2"
+          }
+        ]
+      }
+    ],
+    "relationships": [
+      {
+        "name": "0f5f78fd-7878-471b-9744-6cd4d857310a",
+        "fromTable": "FACT_VENTA",
+        "fromColumn": "IDW_PRODUCTO",
+        "toTable": "DIM_PRODUCTO",
+        "toColumn": "IDW_PRODUCTO"
+      },
+      {
+        "name": "3e1b733c-de0f-471e-bf58-4bd67bb0682b",
+        "fromTable": "FACT_VENTA",
+        "fromColumn": "IDW_TIPOVENTA",
+        "toTable": "DIM_TIPOVENTA",
+        "toColumn": "IDW_TIPOVENTA"
+      },
+      {
+        "name": "ab70e5e6-2960-46ed-b896-b9888fd6b874",
+        "fromTable": "FACT_VENTA",
+        "fromColumn": "FECHA",
+        "toTable": "DIM_TIEMPO",
+        "toColumn": "FECHA"
+      },
+      {
+        "name": "0ac93ebf-2e58-45c6-afab-f1ecd3111fad",
+        "fromTable": "FACT_VENTA",
+        "fromColumn": "IDW_HORA",
+        "toTable": "DIM_HORA",
+        "toColumn": "IDW_HORA"
+      },
+      {
+        "name": "3cfa24a1-5ed5-450f-9c8c-b89b652e23b4",
+        "fromTable": "FACT_VENTA",
+        "fromColumn": "IDW_GEOGRAFIA",
+        "toTable": "DIM_GEOGRAFIA",
+        "toColumn": "IDW_GEOGRAFIA"
+      },
+      {
+        "name": "f128b056-afd4-4aeb-8bed-aef03c0bbcdc",
+        "fromTable": "FACT_VENTA",
+        "fromColumn": "IDW_CLIENTE",
+        "toTable": "DIM_CLIENTE",
+        "toColumn": "IDW_CLIENTE"
+      }
+    ],
+    "annotations": [
+      {
+        "name": "ClientCompatibilityLevel",
+        "value": "400"
+      }
+    ]
+  },
+  "id": "SemanticModel"
+}

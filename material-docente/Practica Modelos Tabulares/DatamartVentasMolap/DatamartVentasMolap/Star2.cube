@@ -1,0 +1,212 @@
+﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="81606f5b-30e0-4da2-85bb-8c67ea0c7748" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Star2</ID>
+  <Name>Star2</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+      <Value>
+        <dds xmlns="">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="2" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-12521" scrolltop="-5818" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="28871" y="16637" backcolor="16777215" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+            <font>
+              <ddsxmlobjectstreamwrapper binary="010000009001b0300100065461686f6d61" />
+            </font>
+            <mouseicon>
+              <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+            </mouseicon>
+          </diagram>
+          <layoutmanager>
+            <ddsxmlobj />
+          </layoutmanager>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="FACT_VENTA" left="-1631" top="-1418" logicalid="1" controlid="1" masterid="0" hint1="0" hint2="0" width="3789" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000cd0e000088130000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="STAR2_FACT_VENTA" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+        </dds>
+      </Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>-12521</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>-5818</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>-1631</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>-1418</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Dimensions>
+    <Dimension dwd:design-time-name="33dba7c2-eca2-4571-baea-60a672fe6570">
+      <ID>FACT VENTA</ID>
+      <Name>FACT VENTA</Name>
+      <DimensionID>FACT VENTA</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="2e6ed43e-837e-484d-ba2a-bdb9c51fd4eb">
+          <AttributeID>IDW PRODUCTO</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+  </Dimensions>
+  <MeasureGroups>
+    <MeasureGroup dwd:design-time-name="de69e136-a9c0-4c70-a9fd-b006ad4bbc98">
+      <ID>FACT VENTA</ID>
+      <Name>FACT VENTA</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="660b541b-380e-46e8-a3f0-25e2d2ffcc7b">
+          <ID>IMPORTE</ID>
+          <Name>IMPORTE</Name>
+          <Source dwd:design-time-name="d358256f-a016-45a7-a97b-252858556079">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="31517752-cc39-427d-a0be-d5179087af8a">
+              <TableID>STAR2_FACT_VENTA</TableID>
+              <ColumnID>IMPORTE</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="00d2b998-f2ac-4445-b9f8-152e17ff7704">
+          <ID>COSTO</ID>
+          <Name>COSTO</Name>
+          <Source dwd:design-time-name="184b5618-dc15-4631-a4d2-c9849d9c8019">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="eb5fe674-a13c-489b-b90b-5d6079ba2500">
+              <TableID>STAR2_FACT_VENTA</TableID>
+              <ColumnID>COSTO</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="4a39ca00-52d7-47c7-be61-05d1b308e808">
+          <ID>CANTIDAD</ID>
+          <Name>CANTIDAD</Name>
+          <Source dwd:design-time-name="06e78d3c-73ef-41cc-8a67-c65fd5f17b49">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="88b26124-467f-48f2-af54-ee74addcc19f">
+              <TableID>STAR2_FACT_VENTA</TableID>
+              <ColumnID>CANTIDAD</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="b4a69989-8f62-4a40-a74a-1db574d7ddbe">
+          <ID>STOCK UNIDADES</ID>
+          <Name>STOCK UNIDADES</Name>
+          <Source dwd:design-time-name="83709c41-aec6-4c1d-8512-7221d6809d04">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="27d973b1-5da7-4de5-9872-ea634adc6f6e">
+              <TableID>STAR2_FACT_VENTA</TableID>
+              <ColumnID>STOCK_UNIDADES</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="e94d978d-8ea6-4555-ac53-04695a7ef8a8">
+          <ID>STOCK PESOS</ID>
+          <Name>STOCK PESOS</Name>
+          <Source dwd:design-time-name="de1bd486-6d2d-4d19-805f-b414c2aeec2c">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="755da5bf-7ef3-400f-87f1-a10e1bc0651e">
+              <TableID>STAR2_FACT_VENTA</TableID>
+              <ColumnID>STOCK_PESOS</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="7530871a-4674-4de2-9b00-fd51904cbf13">
+          <CubeDimensionID>FACT VENTA</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="b75a6693-a8b3-4d44-afa8-10227dfa423f">
+              <AttributeID>IDW PRODUCTO</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="66ca227e-aa18-4cbd-b466-2d3b4f24b7c3">
+                  <DataType>Double</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="82ee8089-38e3-4920-8420-54fa6dc808f3">
+                    <TableID>STAR2_FACT_VENTA</TableID>
+                    <ColumnID>IDW_PRODUCTO</ColumnID>
+                  </Source>
+                </KeyColumn>
+                <KeyColumn dwd:design-time-name="935b4faf-1a44-4b2e-b1c4-11331f6ec349">
+                  <DataType>Double</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="37c11731-7f2e-484d-b01d-8e2f67d787f5">
+                    <TableID>STAR2_FACT_VENTA</TableID>
+                    <ColumnID>IDW_GEOGRAFIA</ColumnID>
+                  </Source>
+                </KeyColumn>
+                <KeyColumn dwd:design-time-name="e9173d24-d88e-41d1-890b-430e9dcf3ce9">
+                  <DataType>Double</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="03d882ff-8775-45f4-9ec6-3902ec395b6b">
+                    <TableID>STAR2_FACT_VENTA</TableID>
+                    <ColumnID>IDW_CLIENTE</ColumnID>
+                  </Source>
+                </KeyColumn>
+                <KeyColumn dwd:design-time-name="8d2cbc7a-4427-480a-8bae-17653a41da13">
+                  <DataType>WChar</DataType>
+                  <DataSize>2</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="789cd0b8-7c7c-45ab-9128-42ea14b04f3b">
+                    <TableID>STAR2_FACT_VENTA</TableID>
+                    <ColumnID>IDW_HORA</ColumnID>
+                  </Source>
+                </KeyColumn>
+                <KeyColumn dwd:design-time-name="72b2978b-a0bd-48e4-9bee-c2cda16864fb">
+                  <DataType>Date</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="75124552-98fd-4b7b-a87d-e1a6edd099bd">
+                    <TableID>STAR2_FACT_VENTA</TableID>
+                    <ColumnID>FECHA</ColumnID>
+                  </Source>
+                </KeyColumn>
+                <KeyColumn dwd:design-time-name="e8ded63b-13d7-4c7e-b768-08d919fda704">
+                  <DataType>Double</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="c25540a7-adaa-46c6-a81a-5cb9133f7417">
+                    <TableID>STAR2_FACT_VENTA</TableID>
+                    <ColumnID>IDW_TIPOVENTA</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+  </MeasureGroups>
+  <Source dwd:design-time-name="3ed355eb-9621-4d37-a78f-38dfd14349ca">
+    <DataSourceViewID>Star2</DataSourceViewID>
+  </Source>
+</Cube>
