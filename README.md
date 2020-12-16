@@ -2,10 +2,10 @@
 # X-FORCE
 ### PROYECTO FINAL (Business Intelligence/ Data Warehouse )
 
-###FlowChart
+## FlowChart
 
-```flow
-st=>start: Login
+``` flow
+st => start: Login
 op=>operation: Login operation
 cond=>condition: Successful Yes or No?
 e=>end: To admin
