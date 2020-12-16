@@ -11,7 +11,7 @@ create table stage_trans_suppliers as select * from public.suppliers limit 0;
 create table stage_trans_categories as select * from public.categories limit 0;
 create table stage_trans_products as select * from public.products limit 0;
 create table stage_trans_orders as select * from public.orders limit 0;
-alter table stage_trans_orders add origen varchar default 'EN LINEA'; -- TIENDA
+alter table stage_trans_orders add origen varchar; -- TIENDA
 create table stage_trans_orderdetails as select * from public.orderdetails limit 0;
 
 -- copiamos estructura del modelo estrella

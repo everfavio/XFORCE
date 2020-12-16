@@ -2,7 +2,7 @@
 SET search_path TO stage;
 ALTER database xforce_orders_online SET search_path TO stage;
 -- creando la funcion
-create or replace function two_etl_stage_fact_order(fecha_inicio date, fecha_final date)
+create or replace function two_etl_stage_fact_order(_fecha_inicio date, _fecha_final date)
 returns boolean
 as $$ 
   --para errores
@@ -15,7 +15,7 @@ as $$
   declare error_table_name text;
   declare error_pg_exception_detail text;
   declare error_pg_exception_hint text;
-    -- para el logueador
+  -- para el logueador
   declare nombre_proceso varchar;
   declare fecha_inicio timestamp;
   declare fecha_fin timestamp;
@@ -36,7 +36,6 @@ as $$
     contador = 0;
     -- limpieza de tiempo
     truncate table  stage_star_fact_orden;
-    \d stage_star_fact_orden
       insert into stage_star_fact_orden (
         id_orden             ,
         flete                ,
@@ -54,9 +53,10 @@ as $$
         idw_repartidor       ,
         idw_producto         ,
         idw_geografia        ,
-        idw_fecha_pedido     ,
-        idw_fecha_entrega    ,
-        idw_fecha_requerido  
+        fecha_pedido     ,
+        fecha_entrega    ,
+        fecha_requerido ,
+        origen 
       ) 
     select
     o.orderid,
@@ -99,12 +99,13 @@ as $$
     ), -1 ) idw_geografia,
     o.orderdate::date,
     o.requireddate::date,
-    o.shippeddate::date
+    o.shippeddate::date,
+    o.origen
     from
       stage_trans_orders o
       inner join stage_trans_orderdetails od on od.orderid = o.orderid
-    where o.orderdate between fecha_inicio and fecha_fin;
-    -- 
+      where o.orderdate between _fecha_inicio and _fecha_final;
+    raise info '%, final %', _fecha_inicio, _fecha_final;
     GET DIAGNOSTICS cantidad_registros = ROW_COUNT;
     fecha_fin = now()::timestamp;
     comentario = FORMAT('El proceso %s termino correctamente', nombre_proceso);

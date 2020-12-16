@@ -20,8 +20,6 @@ CREATE TABLE dim_cliente(
 )
 ;
 
-
-
 -- 
 -- TABLE: dim_empleado 
 --
@@ -154,9 +152,10 @@ CREATE TABLE fact_orden(
     idw_repartidor           int4              NOT NULL,
     idw_producto             int4              NOT NULL,
     idw_geografia            int4              NOT NULL,
-    idw_fecha_pedido         int4              NOT NULL,
-    idw_fecha_entrega        int4              NOT NULL,
-    idw_fecha_requerido      int4              NOT NULL
+    fecha_pedido         date              NOT NULL,
+    fecha_entrega        date              NOT NULL,
+    fecha_requerido      date              NOT NULL,
+    origen                varchar(20) 
 )
 ;
 
@@ -192,17 +191,17 @@ ALTER TABLE fact_orden ADD CONSTRAINT "Refdim_geografia10"
 ;
 
 ALTER TABLE fact_orden ADD CONSTRAINT "Refdim_tiempo11" 
-    FOREIGN KEY (idw_fecha_pedido)
+    FOREIGN KEY (fecha_pedido)
     REFERENCES dim_tiempo(idw_tiempo)
 ;
 
 ALTER TABLE fact_orden ADD CONSTRAINT "Refdim_tiempo12" 
-    FOREIGN KEY (idw_fecha_requerido)
+    FOREIGN KEY (fecha_requerido)
     REFERENCES dim_tiempo(idw_tiempo)
 ;
 
 ALTER TABLE fact_orden ADD CONSTRAINT "Refdim_tiempo13" 
-    FOREIGN KEY (idw_fecha_entrega)
+    FOREIGN KEY (fecha_entrega)
     REFERENCES dim_tiempo(idw_tiempo)
 ;
 
