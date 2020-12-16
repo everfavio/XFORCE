@@ -2,10 +2,5 @@
 # X-FORCE
 ### PROYECTO FINAL (Business Intelligence/ Data Warehouse )
 
-| Item      | Value |
-| --------- | -----:|
-| Computer  | $1600 |
-| Phone     |   $12 |
-| Pipe      |    $1 |
 
 
