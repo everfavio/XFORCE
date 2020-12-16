@@ -21,6 +21,12 @@ select two_etl_stage_dim_repartidor();
 select two_etl_stage_dim_tiempo();
 select two_etl_stage_fact_order('2020-01-01'::date, '2020-02-01'::date);
 
+select three_etl_star_dim_cliente();
+select three_etl_star_dim_empleado();
+select three_etl_star_dim_geografia();
+
+
+
 
 select * from log_de_procesos;
 truncate  table log_de_procesos;
@@ -31,3 +37,7 @@ select * from stage_star_dim_geografia;
 select * from stage_star_dim_empleado;
 select * from stage_star_dim_cliente;
 select * from stage_star_dim_cliente;
+select * from star.dim_cliente;
+select * from star.dim_empleado;
+
+
