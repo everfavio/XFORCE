@@ -2,16 +2,10 @@
 # X-FORCE
 ### PROYECTO FINAL (Business Intelligence/ Data Warehouse )
 
-## FlowChart
+| Item      | Value |
+| --------- | -----:|
+| Computer  | $1600 |
+| Phone     |   $12 |
+| Pipe      |    $1 |
 
-``` flow
-st => start: Login
-op=>operation: Login operation
-cond=>condition: Successful Yes or No?
-e=>end: To admin
-
-st->op->cond
-cond(yes)->e
-cond(no)->op
-```
 
