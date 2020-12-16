@@ -7,7 +7,9 @@
 ```seq
 
 Planificacion del Proyecto->Definicion de Requermientos del Negocio:  
-
+Note right of China: China thinks\nabout it 
+China-->Andrew: How are you? 
+Andrew->>China: I am good thanks!
 ```
 
 ###End
