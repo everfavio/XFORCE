@@ -26,56 +26,31 @@ as $$
   --body del procediiento
   BEGIN
     fecha_inicio = now()::timestamp;
-    nombre_proceso = 'one_etl_stage_dim_producto';
+    nombre_proceso = 'two_etl_stage_dim_repartidor';
     cantidad_registros = 0;
-    -- limpieza de suppliers
-    truncate table  stage_star_dim_producto;
-    insert into stage_star_dim_producto (
-      idw_producto     ,
-      id_producto      ,
-      nombre_producto  ,
-      precio_unitario  ,
-      cantidad_unidad  ,
-      id_categoria     ,
-      categoria        ,
-      id_proveedor     ,
-      proveedor        ,
-      ciudad_proveedor ,
-      pais_proveedor   ,
-      region_proveedor ,
-      nombre_contacto  ,
-      fecha_inicio     ,
-      fecha_fin        ,
-      vigente         
+    -- limpieza de repartidor
+    truncate table  stage_star_dim_repartidor;
+    insert into stage_star_dim_repartidor (
+      idw_repartidor,   
+      id_repartidor ,
+      repartidor    ,
+      fecha_inicio  ,
+      fecha_fin     ,
+      vigente      
     )
-    select 
+    select
     coalesce(
-      (select idw_producto
-      from star.dim_producto
-      where id_producto = stp.productid
-      and id_categoria = stp.categoryid
-      and id_proveedor = stp.supplierid
-    ), -1 ) idw_producto,
-    stp.productid,
-    stp.productname,
-    stp.unitprice,
-    -- cast (stp.quantityperunit as integer) quantityperunit,
-    12,
-    stp.categoryid,
-    stc.categoryname,
-    stp.supplierid,
-    sts.companyname,
-    sts.city,
-    sts.country,
-    sts.region,
-    sts.contactname,
-    now() fecha_inicio,
-    now() fecha_final,
-    true vigente
+      (select idw_repartidor
+      from star.dim_repartidor
+      where id_repartidor = sts.shipperid
+    ), -1 ) idw_repartidor,
+    shipperid,
+    companyname,
+    now(),
+    now(),
+    true vigente 
     from
-      stage_trans_products stp
-      inner join stage_trans_categories stc on stc.categoryid = stp.categoryid
-      inner join stage_trans_suppliers sts on sts.supplierid = stp.supplierid;    
+      stage_trans_shippers sts;
     -- 
     GET DIAGNOSTICS cantidad_registros = ROW_COUNT;
     fecha_fin = now()::timestamp;
@@ -105,6 +80,6 @@ as $$
   END;
 $$ language plpgsql;
 
--- select two_etl_stage_dim_producto()
--- select * from stage_star_dim_producto;
+-- select two_etl_stage_dim_repartidor()
+-- select * from stage_star_dim_repartidor;
 -- select * from log_de_procesos;
