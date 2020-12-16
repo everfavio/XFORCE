@@ -2,6 +2,12 @@
 # X-FORCE
 ### PROYECTO FINAL (Business Intelligence/ Data Warehouse )
 
+```seq
+A->B: Message
+B->C: Message
+C->A: Message
+```
+
 
 
 
