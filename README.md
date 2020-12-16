@@ -2,14 +2,4 @@
 # X-FORCE
 ### PROYECTO FINAL (Business Intelligence/ Data Warehouse )
 
-###Metodologia RALF KIMBALL
-                    
-```seq
 
-Planificacion del Proyecto->Definicion de Requermientos del Negocio:  
-Note right of China: China thinks\nabout it 
-China-->Andrew: How are you? 
-Andrew->>China: I am good thanks!
-```
-
-###End
