@@ -114,10 +114,9 @@ CREATE TABLE dim_repartidor(
 --
 
 CREATE TABLE dim_tiempo(
-    idw_tiempo         serial       NOT NULL,
+    fecha              date       NOT NULL,
     gestion            int4       NOT NULL,
     mes                int4       NOT NULL,
-    fecha              date       NOT NULL,
     periodo            int4,
     semestre           int4,
     trimestre          int4       NOT NULL,
@@ -128,7 +127,7 @@ CREATE TABLE dim_tiempo(
     fecha_inicio       date       NOT NULL,
     fecha_fin          date,
     vigente            boolean    NOT NULL,
-    CONSTRAINT "PK1_2" PRIMARY KEY (idw_tiempo)
+    CONSTRAINT "PK1_2" PRIMARY KEY (fecha)
 )
 ;
 

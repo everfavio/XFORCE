@@ -2,7 +2,7 @@
 SET search_path TO stage;
 ALTER database xforce_orders_online SET search_path TO stage;
 -- creando la funcion
-create or replace function two_etl_stage_dim_tiempo()
+create or replace function two_etl_stage_fact_order(fecha_inicio date, fecha_final date)
 returns boolean
 as $$ 
   --para errores
@@ -31,57 +31,79 @@ as $$
   --body del procediiento
   BEGIN
     fecha_inicio = now()::timestamp;
-    nombre_proceso = 'two_etl_stage_dim_tiempo';
+    nombre_proceso = 'two_etl_stage_fact_orden';
     cantidad_registros = 0;
     contador = 0;
     -- limpieza de tiempo
-    truncate table  stage_star_dim_tiempo;
-    -- buscando los maximos y minimos 
-    select min(orderdate) fecha_min, max(shippeddate) fecha_max, 
-    max(shippeddate) - min(orderdate) cantidad_dias
-    into  fecha_min,fecha_max, cantidad_dias
-    from public.orders;
-    loop
-      if contador >= cantidad_dias then 
-        exit;
-      end if;
-      contador = contador + 1;
-      fecha_actual = fecha_min + interval '1' day * contador;
-      -- select ('2020-01-01'::date + interval '1'  day * 100)::date dead;
-      insert into stage_star_dim_tiempo (
-        fecha        ,
-        gestion      ,
-        mes          ,
-        periodo      ,
-        semestre     ,
-        trimestre    ,
-        quincena     ,
-        bimestre     ,
-        dia_literal  ,
-        mes_literal  ,
-        fecha_inicio ,
-        fecha_fin    ,
-        vigente     
+    truncate table  stage_star_fact_orden;
+    \d stage_star_fact_orden
+      insert into stage_star_fact_orden (
+        id_orden             ,
+        flete                ,
+        ciudad_entrega       ,
+        region_entrega       ,
+        pais_entrega         ,
+        importe_venta_total  ,
+        id_orden_detalle     ,
+        precio_unitario      ,
+        cantidad             ,
+        descuento            ,
+        importe_venta_detalle,
+        idw_cliente          ,
+        idw_empleado         ,
+        idw_repartidor       ,
+        idw_producto         ,
+        idw_geografia        ,
+        idw_fecha_pedido     ,
+        idw_fecha_entrega    ,
+        idw_fecha_requerido  
       ) 
-      select 
-      coalesce(
-      (select fecha
-      from star.dim_tiempo
-      where fecha = fecha_actual::date 
-      ), fecha_actual ) fecha,
-      extract (YEAR FROM fecha_actual),
-      extract (MONTH FROM fecha_actual),
-      extract (MONTH FROM fecha_actual),
-      1 semestre,
-      extract (QUARTER FROM fecha_actual),
-      1 quincena,
-      1 bimestre,
-      to_char(fecha_actual, 'Day'),
-      to_char(fecha_actual, 'Month'),
-      now(),
-      now(),
-      true vigente;
-    end loop; 
+    select
+    o.orderid,
+    o.freight,
+    shipcity,
+    shipregion,
+    shipcountry,
+    0 importe_total,
+    od.orderdetailid,
+    od.unitprice,
+    coalesce(od.quantity, 0),
+    coalesce(od.discount, 0),
+    coalesce(od.quantity, 0) * coalesce(od.unitprice, 0),
+    coalesce(
+      (select idw_cliente
+      from star.dim_cliente
+      where id_cliente = o.customerid
+    ), -1 ) idw_cliente,
+    coalesce(
+      (select idw_empleado
+      from star.dim_empleado
+      where id_empleado = o.employeeid
+    ), -1 ) idw_empleado,
+    coalesce(
+      (select idw_repartidor
+      from star.dim_repartidor
+      where id_repartidor = o.shipvia
+    ), -1 ) idw_repartidor,
+    coalesce(
+      (select idw_producto
+      from star.dim_producto
+      where id_producto = od.productid
+    ), -1 ) idw_producto,
+    coalesce(
+      (select idw_geografia
+      from star.dim_geografia
+      where trim(upper(ciudad)) = trim(upper(o.shipcity))
+      and  trim(upper(region)) = trim(upper(o.shipregion))
+      and  trim(upper(pais)) = trim(upper(o.shipcountry))
+    ), -1 ) idw_geografia,
+    o.orderdate::date,
+    o.requireddate::date,
+    o.shippeddate::date
+    from
+      stage_trans_orders o
+      inner join stage_trans_orderdetails od on od.orderid = o.orderid
+    where o.orderdate between fecha_inicio and fecha_fin;
     -- 
     GET DIAGNOSTICS cantidad_registros = ROW_COUNT;
     fecha_fin = now()::timestamp;
