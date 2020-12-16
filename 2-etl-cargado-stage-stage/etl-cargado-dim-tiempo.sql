@@ -2,7 +2,6 @@
 SET search_path TO stage;
 ALTER database xforce_orders_online SET search_path TO stage;
 -- creando la funcion
-
 create or replace function two_etl_stage_dim_tiempo()
 returns boolean
 as $$ 
@@ -37,7 +36,6 @@ as $$
     contador = 0;
     -- limpieza de tiempo
     truncate table  stage_star_dim_tiempo;
-    \d stage_star_dim_tiempo;
     -- buscando los maximos y minimos 
     select min(orderdate) fecha_max, max(shippeddate) fecha_min, 
     max(shippeddate) - min(orderdate) cantidad_dias
@@ -65,7 +63,6 @@ as $$
         fecha_inicio ,
         fecha_fin    ,
         vigente     
-
       ) 
       select 
       coalesce(
@@ -73,24 +70,20 @@ as $$
       from star.dim_tiempo
       where fecha = fecha_actual::date 
     ), -1 ) idw_tiempo,
-      (extract 'YEAR' FROM fecha_actual),
-      ()
+      extract (YEAR FROM fecha_actual),
+      extract (MONTH FROM fecha_actual),
+      fecha_actual,
+      extract (MONTH FROM fecha_actual),
+      1 semestre,
+      extract (QUARTER FROM fecha_actual),
+      1 quincena,
+      1 bimestre,
+      to_char(fecha_actual, 'Day'),
+      to_char(fecha_actual, 'Month'),
+      now(),
+      now(),
+      true vigente;
     end loop; 
-    -- 
-    \d stage_star_dim_tiempo
-    select
-    coalesce(
-      (select idw_repartidor
-      from star.dim_repartidor
-      where id_repartidor = sts.shipperid
-    ), -1 ) idw_repartidor,
-    shipperid,
-    companyname,
-    now(),
-    now(),
-    true vigente 
-    from
-      stage_trans_shippers sts;
     -- 
     GET DIAGNOSTICS cantidad_registros = ROW_COUNT;
     fecha_fin = now()::timestamp;
@@ -120,6 +113,6 @@ as $$
   END;
 $$ language plpgsql;
 
--- select two_etl_stage_dim_repartidor()
--- select * from stage_star_dim_repartidor;
+-- select two_etl_stage_dim_tiempo()
+-- select * from stage_star_dim_tiempo;
 -- select * from log_de_procesos;
