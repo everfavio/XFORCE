@@ -49,7 +49,7 @@ select one_etl_stage_suppliers();
 ```
 ## Llenado de las dims del stage
 
-### Creacion de las funciones de volcado
+### Creacion de las funciones de volcado de stage a stage
 ### **IMPORTANTE** Solo una vez, Creacion de los funciones para el volcado
 ```sql
  \i 2-etl-cargado-stage-stage/etl-cargado-dim-cliente.sql
@@ -70,6 +70,18 @@ select two_etl_stage_dim_geografia();
 select two_etl_stage_dim_producto();
 select two_etl_stage_dim_repartidor();
 select two_etl_stage_dim_tiempo();
+```
+### Creacion de las funciones de volcado de stage a star
+### **IMPORTANTE** Solo una vez, Creacion de los funciones para el volcado
+```sql
+\i 3-etl-cargado-star/etl-star-dim-cliente.sql
+\i 3-etl-cargado-star/etl-star-dim-empleado2.sql
+\i 3-etl-cargado-star/etl-star-dim-geografia.sql
+\i 3-etl-cargado-star/etl-star-dim-producto.sql
+\i 3-etl-cargado-star/etl-star-dim-repartidor.sql
+\i 3-etl-cargado-star/etl-star-dim-tiempo.sql
+\i 3-etl-cargado-star/etl_star-fact_orden.sql
+
 ```
 
 ### Volcado de las dims en star
