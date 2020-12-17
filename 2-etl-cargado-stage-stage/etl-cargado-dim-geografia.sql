@@ -55,13 +55,13 @@ as $$
     true vigente
     from
       (
-        select coalesce(city, ' ') city, coalesce(region, ' ') region, coalesce(country, ' ') country from stage_trans_suppliers
+        select coalesce(city, '-') city, coalesce(region, '-') region, coalesce(country, '-') country from stage_trans_suppliers
         union
-        select coalesce(city, ' ') city, coalesce(region, ' ') region, coalesce(country, ' ') country from stage_trans_employees
+        select coalesce(city, '-') city, coalesce(region, '-') region, coalesce(country, '-') country from stage_trans_employees
         union
-        select coalesce(city, ' ') city , coalesce(region, ' ') region, coalesce(country, ' ') country from stage_trans_customers
+        select coalesce(city, '-') city , coalesce(region, '-') region, coalesce(country, '-') country from stage_trans_customers
         union
-        select coalesce(shipcity, ' ') city, coalesce(shipregion, ' ') region, coalesce(shipcountry, ' ') country from stage_trans_orders
+        select coalesce(shipcity, '-') city, coalesce(shipregion, '-') region, coalesce(shipcountry, '-') country from stage_trans_orders
       ) stg;
     --
     GET DIAGNOSTICS cantidad_registros = ROW_COUNT;
