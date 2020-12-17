@@ -68,7 +68,7 @@ identificados, y en las columnas, las dimensiones identificadas. Finalmente se b
 ### 4.3 Modelado Dimensional
 La creación de un modelo dimensional es un proceso dinámico y altamente iterativo.
 
-![](img/Diagrama%20en%20blanco.png)
+![](img/img3.png)
 
 
 
