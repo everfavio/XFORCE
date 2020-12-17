@@ -38,16 +38,15 @@ as $$
     truncate table  stage_star_dim_tiempo;
     -- buscando los maximos y minimos 
     select min(orderdate) fecha_min, max(shippeddate) fecha_max, 
-    max(shippeddate) - min(orderdate) cantidad_dias
+    (max(shippeddate) - min(orderdate)) + 15 cantidad_dias
     into  fecha_min,fecha_max, cantidad_dias
     from public.orders;
+    fecha_actual = fecha_min;
     loop
       if contador >= cantidad_dias then 
         exit;
       end if;
       contador = contador + 1;
-      fecha_actual = fecha_min + interval '1' day * contador;
-      -- select ('2020-01-01'::date + interval '1'  day * 100)::date dead;
       insert into stage_star_dim_tiempo (
         fecha        ,
         gestion      ,
@@ -81,6 +80,7 @@ as $$
       now(),
       now(),
       true vigente;
+      fecha_actual = fecha_min + interval '1' day * contador;
     end loop; 
     -- 
     GET DIAGNOSTICS cantidad_registros = ROW_COUNT;

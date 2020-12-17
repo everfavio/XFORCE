@@ -99,6 +99,7 @@ select * from star.dim_repartidor;
 select * from star.dim_geografia;
 select * from star.fact_orden;
 select * from stage_star_dim_producto;
+select * from stage_star_dim_tiempo;
 select * from stage_star_dim_geografia;
 select * from stage_star_dim_empleado;
 select * from stage_star_dim_cliente;
