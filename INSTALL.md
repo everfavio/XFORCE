@@ -2,30 +2,30 @@
 
 Posicionarse en el psql cli nativo de postgresql 
 ### Creación de esquemas
-!importante esto solo debe hacerse una vez
+**importante** esto solo debe hacerse una vez
 ```sql
  \i 0-acreacion-schemas/creacion-stage-star.sql
  \i 0-acreacion-schemas/creacion-star.sql
 ```
 ### Otorgacion de permisos
-! importante esto solo debe hacerse una vez
+**importante** esto solo debe hacerse una vez
 ```sql
  \i 0-acreacion-schemas/grant-to-stage-from-star.sql
 ```
 ### Copia de estructuras 
-[Opcional] hacer limpieza del stage.
+**Opcional** hacer limpieza del stage.
 ```sql
  \i 0-copia-estructuras/limpia-stage.sql
  \i 0-copia-estructuras/copia-estructuras.sql
 ```
 ###  Creación del Logger
-!importante si ya tiene el logueador creado no es necesario
+**importante** si ya tiene el logueador creado no es necesario
 ```sql
  \i 0-copia-estructuras/creacion-logueador.sql
 ```
 
 ##  Llenado del stage con las fuentes originales
-### creacion de los funciones para el volcado
+### **IMPORTANTE** Solo una vez, Creacion de los funciones para el volcado
 ```sql
  \i 1-etl-copia-tablas/etl-copia-categories.sql
  \i 1-etl-copia-tablas/etl-copia-customers.sql
@@ -50,7 +50,7 @@ select one_etl_stage_suppliers();
 ## Llenado de las dims del stage
 
 ### Creacion de las funciones de volcado
-
+### **IMPORTANTE** Solo una vez, Creacion de los funciones para el volcado
 ```sql
  \i 2-etl-cargado-stage-stage/etl-cargado-dim-cliente.sql
  \i 2-etl-cargado-stage-stage/etl-cargado-dim-empleado.sql
@@ -82,10 +82,14 @@ select three_etl_star_dim_tiempo();
 select three_etl_star_dim_repartidor();
 ```
 #### llenado fact en stage
+
+
+**IMPOTANTISIMO** colocar las fechas correctas 
 ```sql
 select two_etl_stage_fact_order('2020-02-01'::date, '2020-02-28'::date);
 ```
 #### llenado fact star FINAL
+**IMPOTANTISIMO** colocar las fechas correctas, las mismas de arriba 
 ```sql
 select three_etl_fact_order('2020-02-01'::date, '2020-02-28'::date);
 ```
