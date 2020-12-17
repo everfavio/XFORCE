@@ -64,3 +64,16 @@ A partir de las entrevistas, podemos identificar temas analíticos y procesos de
 
 Por otra parte, a partir del análisis se puede construir una herramienta de la metodología denominada matriz de procesos/dimensiones, una dimensión es una forma o vista o criterio por medio de cual se pueden sumariar, cruzar o cortar datos numéricos a analizar, datos que se denominan medidas. Esta matriz tiene en sus filas los procesos de negocio
 identificados, y en las columnas, las dimensiones identificadas. Finalmente se busca priorizar los requerimientos o procesos de negocios más críticos.
+
+### 4.3 Modelado Dimensional
+La creación de un modelo dimensional es un proceso dinámico y altamente iterativo.
+
+![](img/Diagrama%20en%20blanco.png)
+
+
+
+
+
+
+
+
