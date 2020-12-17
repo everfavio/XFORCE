@@ -60,9 +60,9 @@ as $$
         set
           id_repartidor = fila_repartidor.id_repartidor   ,
           repartidor    = fila_repartidor.repartidor      ,
-          ciudad        = fila_repartidor.ciudad          ,
-          region        = fila_repartidor.region          ,
-          pais          = fila_repartidor.pais
+          ciudad        = coalesce(fila_repartidor.ciudad, '-')          ,
+          region        = coalesce(fila_repartidor.region, '-')          ,
+          pais          = coalesce(fila_repartidor.pais, '-')
         where idw_repartidor = fila_repartidor.idw_repartidor;
         contador_diferencias = contador_diferencias + 1;
       end if;
