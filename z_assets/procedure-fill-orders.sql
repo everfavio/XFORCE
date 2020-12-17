@@ -109,4 +109,5 @@ LOOP
 $$ language plpgsql;
 
 select fill_orders(2, 2020); 
+select count(*) from public.orders;
 
