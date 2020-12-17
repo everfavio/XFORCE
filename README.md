@@ -159,3 +159,6 @@ La metodología de Kimball proporciona una base empírica y metodológica adecua
 gráficos y documentos, que proporcionan una gran ayuda para iniciarse en el ámbito de la construcción de un Datawarehouse
 
 
+# PASOS CONSECUTIVOS APLICADOS AL PROYECTO 
+### Análisis de Requerimientos
+
