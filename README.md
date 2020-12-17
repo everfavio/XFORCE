@@ -51,6 +51,14 @@ Además en esta parte se define cómo realizar la administración o gestión de 
 - Rastreo de problemas.
 - Desarrollo de una plan de comunicación comprensiva que direcciones la empresa y las áreas de TI.
 
+### 4.2 Análisis de Requerimientos
+La definición de los requerimientos es en gran medida un proceso de entrevistar al personal de negocio y técnico, pero siempre conviene tener un poco de preparación previa. Se debe aprender tanto como se pueda sobre el negocio, los competidores, la industria y los clientes del mismo. Hay que leer todos los informes posibles de la organización; rastrear los documentos de estrategia interna; entrevistar a los empleados, analizar lo que se dice en la prensa acerca de la organización, la competencia y la industria. Se deben conocer los términos y la terminología del negocio.
+Parte del proceso de preparación es averiguar a quién se debe realmente entrevistar. esto normalmente implica examinar cuidadosamente el organigrama de la organización. Hay básicamente cuatro grupos de personas con las que hablar desde el principio: el directivo responsable de tomar las decisiones estratégicas; los administradores intermedios y de negocio responsables de explorar alternativas estratégicas y aplicar decisiones; personal de sistemas, si existen, la gente que realmente sabe qué tipos de problemas informáticos y de datos existen; y por último, la gente que se necesita entrevistar por razones políticas. 
 
+A partir de las entrevistas, podemos identificar temas analíticos y procesos de negocio. Los temas analíticos agrupan requerimientos comunes en un tema común
 
+|  Tema Analitico | Análisis o requerimiento inferido o pedido  |Proceso de negocio o soporte  | Comentarios   |
+| ------------ | ------------ | ------------ | ------------ |
+|   Planificacion de Ventas| Análisis historico de ordenes de ordenes de revendodores| Ordenes de Compras  | Por cliente por país, por region de ventas    |
+|  |Proyección de Ventas  | Ordenes de Compras | La proyección es un proceso de negocio que usa las órdenes como entradas |
 
