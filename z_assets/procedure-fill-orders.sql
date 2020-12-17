@@ -108,5 +108,5 @@ LOOP
   END;
 $$ language plpgsql;
 
-select fill_orders(1, 2020); 
+select fill_orders(2, 2020); 
 

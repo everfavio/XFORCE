@@ -83,11 +83,11 @@ select three_etl_star_dim_repartidor();
 ```
 #### llenado fact en stage
 ```sql
-select two_etl_stage_fact_order('2020-01-01'::date, '2020-02-01'::date);
+select two_etl_stage_fact_order('2020-02-01'::date, '2020-02-28'::date);
 ```
 #### llenado fact star FINAL
 ```sql
-select three_etl_fact_order('2020-01-01'::date, '2020-02-01'::date);
+select three_etl_fact_order('2020-02-01'::date, '2020-02-28'::date);
 ```
 
 ### verificaciones
@@ -103,8 +103,9 @@ select * from stage_star_dim_tiempo;
 select * from stage_star_dim_geografia;
 select * from stage_star_dim_empleado;
 select * from stage_star_dim_cliente;
-select * from stage_star_fact_orden;
+select count(*) from stage_star_fact_orden;
 select * from star.dim_cliente;
-select * from star.fact_orden;
+select count(*) from star.fact_orden;
+
 ```
 
