@@ -25,3 +25,14 @@ La metodología se basa en lo que Kimball denomina Ciclo de Vida Dimensional del
 - Ofrecer la solución completa: proporcionar todos los elementos necesarios para entregar valor a los usuarios de negocios. Para comenzar, esto significa tener un almacén de datos sólido, bien diseñado, con calidad probada, y accesible. También se deberá entregar herramientas de consulta ad hoc, aplicaciones para informes y análisis avanzado, capacitación y soporte.
 
 ![](img/Diagrama%20en%20blanco.png)
+
+Los requerimientos del negocio son el soporte inicial de las tareas subsiguientes. En segundo lugar podemos ver tres rutas o caminos que se enfocan en tres diferentes áreas: 
+
+- Tecnología (Camino Superior). Implica tareas relacionadas con
+software específico, por ejemplo, Microsoft SQL Analysis Services. 
+
+- Datos (Camino del medio). Se implementa el modelo dimensional, y se desarrolla el subsistema de Extracción, Transformación y Carga (Extract, Transformation, and Load - ETL) para cargar el DW. 
+
+- Aplicaciones de Inteligencia de Negocios (Camino Inferior). En esta ruta se encuentran tareas en las que se diseña y desarrolla las aplicaciones de negocios para los usuarios finales
+
+Estas rutas se combinan cuando se instala finalmente el sistema. Por debajo de la figura se muestra la actividad general de administración del proyecto la cual se puede describir de la siguiente forma:
