@@ -158,7 +158,8 @@ Las aplicaciones analíticas son más complejas que los informes estándar. Norm
 La metodología de Kimball proporciona una base empírica y metodológica adecuada para las implementaciones de almacenes de datos pequeños y medianos, dada su gran versatilidad y su enfoque ascendente, que permite construir los almacenes en forma escalonada. Además presenta una serie de herramientas, tales como planillas,
 gráficos y documentos, que proporcionan una gran ayuda para iniciarse en el ámbito de la construcción de un Datawarehouse
 
-
-# PASOS CONSECUTIVOS APLICADOS AL PROYECTO 
+------------
+## PASOS CONSECUTIVOS APLICADOS AL PROYECTO 
+------------
 ### Análisis de Requerimientos
 
