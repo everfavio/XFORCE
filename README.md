@@ -62,3 +62,5 @@ A partir de las entrevistas, podemos identificar temas analíticos y procesos de
 |   Planificacion de Ventas| Análisis historico de ordenes de ordenes de revendodores| Ordenes de Compras  | Por cliente por país, por region de ventas    |
 |  |Proyección de Ventas  | Ordenes de Compras | La proyección es un proceso de negocio que usa las órdenes como entradas |
 
+Por otra parte, a partir del análisis se puede construir una herramienta de la metodología denominada matriz de procesos/dimensiones, una dimensión es una forma o vista o criterio por medio de cual se pueden sumariar, cruzar o cortar datos numéricos a analizar, datos que se denominan medidas. Esta matriz tiene en sus filas los procesos de negocio
+identificados, y en las columnas, las dimensiones identificadas. Finalmente se busca priorizar los requerimientos o procesos de negocios más críticos.
