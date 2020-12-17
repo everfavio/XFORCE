@@ -93,6 +93,55 @@ Una forma de identificar las tablas de dimensiones es que sus atributos son posi
 El último paso consiste en identificar las medidas que surgen de los procesos de negocios. Una medida es un atributo (campo) de una tabla que se desea analizar, sumarizando o agrupando sus datos, usando los criterios de corte conocidos como dimensiones. Las medidas habitualmente se vinculan con el nivel de granularidad y se encuentran en tablas que denominamos tablas de hechos (fact) Cada tabla de hechos tiene como atributos una o más medidas de un proceso organizacional, de acuerdo a los requerimientos. Un registro contiene una medida expresada en números, como ser cantidad, tiempo, dinero, etc., sobre la cual se desea realizar una operación de agregación (promedio, conteo, suma, etc.) en función de una o más dimensiones. La granularidad es el nivel de detalle que posee cada registro de una tabla de hechos. 
 
 ### 4.3.5 Identificar las tablas de hechos y medidas
+Se pueden caracterizar de la siguiente forma :
+
+- Características relacionadas con la futura tabla dimensional del almacén de datos (target), por ejemplo tipo de datos, si es clave primaria, valores de ejemplo, etc. 
+- El origen de los datos (source, por lo general atributos de las tablas transaccionales). 
+- Reglas de conversión, transformación y carga (ETL rules), que nos dicen como transformar los datos de las tablas de origen a las del almacén de datos.
+
+### 4.3.6 Implemntar el Modelo Dimensional
+Este proceso consiste simplemente en completar la información incompleta de los pasos anteriores. El objetivo en general es identificar todos los atributos útiles y sus ubicaciones, definiciones y reglas de negocios asociadas que especifican cómo se cargan estos datos. 
+
+### 4.3.7 Prueba del Modelo
+Si el modelo ya esta estable, lo que se hace habitualmente es probarlo contra los requerimientos del negocio. Haciendo la pregunta práctica de ¿Cómo podemos obtener esta información en particular del modelo? Para las pruebas podemos usar diseños de reportes estructurados, de usuarios actuales, diseños de cubos prospectivos, etc. 
+
+### 4.3.8 Revisión y Validacion del Modelo
+Un vez que tenemos confianza plena en el modelo, se ingresa en esta etapa final, lo cual implica revisar el modelo con diferentes audiencias, cada una con diferentes conocimientos técnicos y del negocio. En el área de sistemas deberían revisarlo los programadores y analistas de los sistemas, y el DBA si existe. También
+debería revisarse con usuarios y personas del negocio que tengan mucho conocimiento de los procesos y que quizás no hayan participado del diseño del modelo. Finalmente se puede hacer un documento que enuncie una serie de preguntas del negocio (tomadas a partir de los requerimientos), y las conteste por medio del modelo.
+
+### 4.3.9 Documentos finales
+Los mas importantes a mencionar serian los siguientes:
+
+- Modelos de datos inicial de alto nivel.
+- Lista de atributos.
+- Diagrama de tablas de hechos.
+- Definicion de campos de medida.
+- Diagrama de tablas de dimensiones.
+- Descripción de los atributos de las dimensiones.
+- Matriz DW (o DW Bus Matrix ) completa.
+
+### 4.4 Diseño Fisico
+En esta parte se intenta contestar las siguientes preguntas:
+- ¿Cómo puede determinar cuán grande será el sistema de DW/BI?
+- ¿Cuáles son los factores de uso que llevarán a una configuración más grande y más compleja? 
+- ¿Cómo se debe configurar el sistema? 
+- ¿Cuánta memoria y servidores se necesitan? ¿Qué tipo de almacenamiento y procesadores? 
+- ¿Cómo instalar el software en los servidores de desarrollo, prueba y producción? 
+- ¿Qué necesitan instalar los diferentes miembros del equipo de DW/BI en sus estaciones de trabajo? 
+- ¿Cómo convertir el modelo de datos lógico en un modelo de datos físicos en la base de datos relacional? 
+- ¿Cómo conseguir un plan de indexación inicial?
+- ¿Debe usarse la partición en las tablas relacionales?
+
+### 4.5 Diseño del sistema de Extracción, Transformación y Carga (ETL)
+El sistema de Extracción, Transformación y Carga (ETL) es la base sobre la cual se alimenta el Datawarehouse. Si el sistema ETL se diseña adecuadamente, puede extraer los datos de los sistemas de origen de datos, aplicar diferentes reglas para aumentar la calidad y consistencia de los mismos, consolidar la información proveniente de distintos sistemas, y finalmente cargar (grabar) la información en el DW en un formato acorde para la utilización por parte de las herramientas de análisis. 
+
+### 4.6 Especificación y desarrollo de aplicaciones de BI
+Una parte fundamental de todo proyecto de DW/BI está en proporcionarles a una gran comunidad de usuarios una forma más estructurada y por lo tanto, más fácil, de acceder al almacén de datos.
+Proporcionamos este acceso estructurado a través de lo que llamamos aplicaciones de inteligencia de negocios (Business Intelligence Aplications). 
+Las aplicaciones de BI son la cara visible de la inteligencia de negocios: los informes y aplicaciones de análisis proporcionan información útil a los usuarios. Las aplicaciones de BI incluyen un amplio espectro de tipos de informes y herramientas de análisis, que van desde informes simples de formato fijo a sofisticadas aplicaciones analíticas que usan complejos algoritmos e información del dominio. Kimball divide a estas aplicaciones en dos categorías basadas en el nivel de sofisticación, y les llama informes estándar y aplicaciones analíticas.
+
+
+
 
 
 
