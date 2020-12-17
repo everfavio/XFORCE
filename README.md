@@ -5,7 +5,7 @@
 # TEAM X-FORCE
   - Ever Favio Argollo Ticona
   - Ivan Fernando Mujica Mamani
-  - Gery Favio Ramirez
+  - Guery Favio Ramirez Martinez
   - Sergio Ramiro Rojas Saire
 
 ### Resumen
