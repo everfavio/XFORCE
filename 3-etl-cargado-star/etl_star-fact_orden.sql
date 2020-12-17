@@ -2,9 +2,9 @@
 SET search_path TO stage;
 ALTER database xforce_orders_online SET search_path TO stage;
 -- creando la funcion
-create or replace function three_etl_star_dim_repartidor()
+create or replace function three_etl_fact_order(_fecha_inicio date, _fecha_final date)
 returns boolean
-as $$
+as $$ 
   --para errores
   declare err_context text;
   declare err_column_name text;
@@ -15,7 +15,7 @@ as $$
   declare error_table_name text;
   declare error_pg_exception_detail text;
   declare error_pg_exception_hint text;
-    -- para el logueador
+  -- para el logueador
   declare nombre_proceso varchar;
   declare fecha_inicio timestamp;
   declare fecha_fin timestamp;
@@ -23,74 +23,66 @@ as $$
   declare cantidad_registros integer;
   declare correcto boolean;
   -- auxiliares
-  declare contador_diferencias integer;
-  declare fila_repartidor record;
-  declare  cursor_repartidors cursor for
-    select
-      idw_repartidor  ,
-      id_repartidor   ,
-      repartidor      ,
-      ciudad          ,
-      region          ,
-      pais
-    from stage_star_dim_repartidor
-    except
-    select
-      idw_repartidor  ,
-      id_repartidor   ,
-      repartidor      ,
-      ciudad          ,
-      region          ,
-      pais
-    from star.dim_repartidor;
+  declare fecha_max date;
+    declare fecha_min date;
+    declare contador integer;
+    declare cantidad_dias integer;
+    declare fecha_actual date;
   --body del procediiento
   BEGIN
     fecha_inicio = now()::timestamp;
-    nombre_proceso = 'etl_star_dim_repartidor';
+    nombre_proceso = 'two_etl_stage_fact_orden';
     cantidad_registros = 0;
-    contador_diferencias = 0;
-    -- encontrar las diferencias
-    open cursor_repartidors;
-    loop
-      fetch cursor_repartidors into fila_repartidor;
-      exit when not found;
-      if(fila_repartidor.idw_repartidor <> -1) then
-        -- actualizando diferentes
-        update star.dim_repartidor
-        set
-          id_repartidor = fila_repartidor.id_repartidor   ,
-          repartidor    = fila_repartidor.repartidor      ,
-          ciudad        = fila_repartidor.ciudad          ,
-          region        = fila_repartidor.region          ,
-          pais          = fila_repartidor.pais
-        where idw_repartidor = fila_repartidor.idw_repartidor;
-        contador_diferencias = contador_diferencias + 1;
-      end if;
-    end loop;
-    close cursor_repartidors;
-    -- cargar los nuevos
-    insert into star.dim_repartidor(
-      id_repartidor   ,
-      repartidor      ,
-      ciudad          ,
-      region          ,
-      pais            ,
-      fecha_inicio    ,
-      fecha_fin       ,
-      vigente
-    )
+    contador = 0;
+    -- limpieza de la fact
+    delete from star.fact_orden 
+    where fecha_pedido between  _fecha_inicio and _fecha_final;
+      insert into star.fact_orden (
+        id_orden             ,
+        flete                ,
+        ciudad_entrega       ,
+        region_entrega       ,
+        pais_entrega         ,
+        importe_venta_total  ,
+        id_orden_detalle     ,
+        precio_unitario      ,
+        cantidad             ,
+        descuento            ,
+        importe_venta_detalle,
+        idw_cliente          ,
+        idw_empleado         ,
+        idw_repartidor       ,
+        idw_producto         ,
+        idw_geografia        ,
+        fecha_pedido     ,
+        fecha_entrega    ,
+        fecha_requerido ,
+        origen 
+      ) 
     select
-      dr.id_repartidor   ,
-      dr.repartidor      ,
-      dr.ciudad          ,
-      coalesce(dr.region, '-'),
-      coalesce(dr.pais, '-' ) ,
-      dr.fecha_inicio    ,
-      dr.fecha_fin       ,
-      dr.vigente
+        id_orden             ,
+        flete                ,
+        ciudad_entrega       ,
+        region_entrega       ,
+        pais_entrega         ,
+        importe_venta_total  ,
+        id_orden_detalle     ,
+        precio_unitario      ,
+        cantidad             ,
+        descuento            ,
+        importe_venta_detalle,
+        idw_cliente          ,
+        idw_empleado         ,
+        idw_repartidor       ,
+        idw_producto         ,
+        idw_geografia        ,
+        fecha_pedido     ,
+        fecha_entrega    ,
+        fecha_requerido ,
+        origen 
     from
-    stage_star_dim_repartidor dr
-    where dr.idw_repartidor = -1;
+      stage_star_fact_orden o;
+      --TODO no se filtra por rango de fechas tmb?
     GET DIAGNOSTICS cantidad_registros = ROW_COUNT;
     fecha_fin = now()::timestamp;
     comentario = FORMAT('El proceso %s termino correctamente', nombre_proceso);

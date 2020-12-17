@@ -25,32 +25,32 @@ as $$
   -- auxiliares
   declare contador_diferencias integer;
   declare fila_tiempo record;
-  declare  cursor_tiempos cursor for
-    select
-      idw_tiempo      ,
-      gestion         ,
-      mes             ,
-      id_departamento ,
-      fecha           ,
-      periodo         ,
-      semestre        ,
-      trimestre       ,
-      quincena        ,
-      bimestre
-    from stage_star_dim_tiempo
-    except
-    select
-      idw_tiempo      ,
-      gestion         ,
-      mes             ,
-      id_departamento ,
-      fecha           ,
-      periodo         ,
-      semestre        ,
-      trimestre       ,
-      quincena        ,
-      bimestre
-    from star.dim_tiempo;
+  -- declare  cursor_tiempos cursor for
+    -- select
+      -- gestion         ,
+      -- mes             ,
+      -- fecha           ,
+      -- periodo         ,
+      -- semestre        ,
+      -- trimestre       ,
+      -- quincena        ,
+      -- bimestre        ,
+      -- dia_literal     ,
+      -- mes_literal     
+    -- from stage_star_dim_tiempo
+    -- except
+    -- select
+      -- gestion         ,
+      -- mes             ,
+      -- fecha           ,
+      -- periodo         ,
+      -- semestre        ,
+      -- trimestre       ,
+      -- quincena        ,
+      -- bimestre,
+      -- dia_literal     ,
+      -- mes_literal     
+    -- from star.dim_tiempo;
   --body del procediiento
   BEGIN
     fecha_inicio = now()::timestamp;
@@ -58,39 +58,41 @@ as $$
     cantidad_registros = 0;
     contador_diferencias = 0;
     -- encontrar las diferencias
-    open cursor_tiempos;
-    loop
-      fetch cursor_tiempos into fila_tiempo;
-      exit when not found;
-      if(fila_tiempo.idw_tiempo <> -1) then
-        -- actualizando diferentes
-        update star.dim_tiempo
-        set
-          gestion           = fila_tiempo.gestion         ,
-          mes               = fila_tiempo.mes             ,
-          id_departamento   = fila_tiempo.id_departamento ,
-          fecha             = fila_tiempo.fecha           ,
-          periodo           = fila_tiempo.periodo         ,
-          semestre          = fila_tiempo.semestre        ,
-          trimestre         = fila_tiempo.trimestre       ,
-          quincena          = fila_tiempo.quincena        ,
-          bimestre          = fila_tiempo.bimestre
-        where idw_tiempo = fila_tiempo.idw_tiempo;
-        contador_diferencias = contador_diferencias + 1;
-      end if;
-    end loop;
-    close cursor_tiempos;
-    -- cargar los nuevos
+    -- open cursor_tiempos;
+    -- loop
+      -- fetch cursor_tiempos into fila_tiempo;
+      -- exit when not found;
+      -- if(fila_tiempo.idw_tiempo <> -1) then
+        -- -- actualizando diferentes
+        -- update star.dim_tiempo
+        -- set
+          -- gestion           = fila_tiempo.gestion         ,
+          -- mes               = fila_tiempo.mes             ,
+          -- id_departamento   = fila_tiempo.id_departamento ,
+          -- periodo           = fila_tiempo.periodo         ,
+          -- semestre          = fila_tiempo.semestre        ,
+          -- trimestre         = fila_tiempo.trimestre       ,
+          -- quincena          = fila_tiempo.quincena        ,
+          -- bimestre          = fila_tiempo.bimestre        ,
+          -- dia_literal       = fila_tiempo.dia_literal,
+          -- mes_literal       = fila_tiempo.mes_literal
+        -- where fecha = fila_tiempo.fecha;
+        -- contador_diferencias = contador_diferencias + 1;
+      -- end if;
+    -- end loop;
+    -- close cursor_tiempos;
+    -- -- cargar los nuevos
     insert into star.dim_tiempo(
       gestion         ,
       mes             ,
-      id_departamento ,
       fecha           ,
       periodo         ,
       semestre        ,
       trimestre       ,
       quincena        ,
       bimestre        ,
+      dia_literal   ,
+      mes_literal   ,
       fecha_inicio    ,
       fecha_fin       ,
       vigente
@@ -98,19 +100,22 @@ as $$
     select
       dt.gestion         ,
       dt.mes             ,
-      dt.id_departamento ,
       dt.fecha           ,
       dt.periodo         ,
       dt.semestre        ,
       dt.trimestre       ,
       dt.quincena        ,
       dt.bimestre        ,
+      dt.dia_literal     ,
+      dt.mes_literal     ,
       dt.fecha_inicio    ,
       dt.fecha_fin       ,
       dt.vigente
     from
     stage_star_dim_tiempo dt
-    where dt.idw_tiempo = -1;
+    where dt.fecha not in (
+      select fecha from star.dim_tiempo
+    );
     GET DIAGNOSTICS cantidad_registros = ROW_COUNT;
     fecha_fin = now()::timestamp;
     comentario = FORMAT('El proceso %s termino correctamente', nombre_proceso);

@@ -30,6 +30,7 @@ as $$
     cantidad_registros = 0;
     -- limpieza de suppliers
     truncate table  stage_star_dim_geografia;
+    -- select * from stage_star_dim_geografia
     insert into stage_star_dim_geografia (
       idw_geografia     ,
       ciudad            ,
@@ -48,8 +49,8 @@ as $$
       and pais = stg.country
     ), -1 ) idw_geografia,
     stg.city,
-    stg.country,
     stg.region,
+    stg.country,
     now() fecha_inicio,
     now() fecha_final,
     true vigente
