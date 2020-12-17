@@ -192,17 +192,17 @@ ALTER TABLE fact_orden ADD CONSTRAINT "Refdim_geografia10"
 
 ALTER TABLE fact_orden ADD CONSTRAINT "Refdim_tiempo11" 
     FOREIGN KEY (fecha_pedido)
-    REFERENCES dim_tiempo(idw_tiempo)
+    REFERENCES dim_tiempo(fecha)
 ;
 
 ALTER TABLE fact_orden ADD CONSTRAINT "Refdim_tiempo12" 
     FOREIGN KEY (fecha_requerido)
-    REFERENCES dim_tiempo(idw_tiempo)
+    REFERENCES dim_tiempo(fecha)
 ;
 
 ALTER TABLE fact_orden ADD CONSTRAINT "Refdim_tiempo13" 
     FOREIGN KEY (fecha_entrega)
-    REFERENCES dim_tiempo(idw_tiempo)
+    REFERENCES dim_tiempo(fecha)
 ;
 
 
