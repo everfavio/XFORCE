@@ -166,3 +166,7 @@ gráficos y documentos, que proporcionan una gran ayuda para iniciarse en el ám
 
 ### Análisis de Requerimientos
 
+|  Tema Analitico | Análisis o requerimiento inferido o pedido  |Proceso de negocio o soporte  | Comentarios   |
+| ------------ | ------------ | ------------ | ------------ |
+|   Comprension de los volumenes de Ventas| Análisis cuantitativo - cualitativo| Ventas | Por cliente, por producto, por empleado, por region |
+|  Selección de mejores clientes  | Cliente | La proyección es un proceso de negocio que usa las órdenes como entradas ||
