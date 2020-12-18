@@ -2,8 +2,8 @@
 SET search_path TO stage;
 ALTER database xforce_orders_online SET search_path TO stage;
 -- creando la funcion
-create or replace function three_etl_fact_order(_fecha_inicio date, _fecha_final date)
-returns boolean
+CREATE OR REPLACE FUNCTION "stage"."three_etl_fact_order"("_fecha_inicio" date, "_fecha_final" date)
+  RETURNS boolean 
 as $$ 
   --para errores
   declare err_context text;
@@ -31,12 +31,12 @@ as $$
   --body del procediiento
   BEGIN
     fecha_inicio = now()::timestamp;
-    nombre_proceso = 'two_etl_stage_fact_orden';
+    nombre_proceso = 'three_etl_fact_order';
     cantidad_registros = 0;
     contador = 0;
     -- limpieza de la fact
-    delete from star.fact_orden 
-    where fecha_pedido between  _fecha_inicio and _fecha_final;
+    -- delete from star.fact_orden 
+    -- where fecha_pedido between  _fecha_inicio and _fecha_final;
       insert into star.fact_orden (
         id_orden             ,
         flete                ,
@@ -81,7 +81,8 @@ as $$
         fecha_requerido ,
         origen 
     from
-      stage_star_fact_orden o;
+      stage_star_fact_orden o
+			where concat(origen,id_orden) not in (select concat(origen,id_orden) from star.fact_orden);
       --TODO no se filtra por rango de fechas tmb?
     GET DIAGNOSTICS cantidad_registros = ROW_COUNT;
     fecha_fin = now()::timestamp;

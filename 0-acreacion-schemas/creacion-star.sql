@@ -205,4 +205,4 @@ ALTER TABLE fact_orden ADD CONSTRAINT "Refdim_tiempo13"
     REFERENCES dim_tiempo(fecha)
 ;
 
-
+CREATE INDEX indice_id_orden on star.fact_orden (id_orden);
