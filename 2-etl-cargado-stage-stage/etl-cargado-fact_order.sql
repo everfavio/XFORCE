@@ -54,8 +54,8 @@ as $$
         idw_producto         ,
         idw_geografia        ,
         fecha_pedido     ,
-        fecha_entrega    ,
         fecha_requerido ,
+        fecha_entrega    ,
         origen 
       ) 
     select

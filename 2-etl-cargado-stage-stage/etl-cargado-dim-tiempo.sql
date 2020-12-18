@@ -40,7 +40,7 @@ as $$
     select min(orderdate) fecha_min, max(shippeddate) fecha_max, 
     (max(shippeddate) - min(orderdate)) + 15 cantidad_dias
     into  fecha_min,fecha_max, cantidad_dias
-    from public.orders;
+    from stage.stage_trans_orders;
     fecha_actual = fecha_min;
     loop
       if contador >= cantidad_dias then 
