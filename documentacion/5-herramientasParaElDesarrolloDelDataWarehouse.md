@@ -6,9 +6,9 @@ Por lo que para la creación de la base de datos se debe tomar en cuenta ciertas
 -	Alta escalabilidad y desempeño para el crecimiento exponencial de datos, lo cual depende mucho de la cantidad de datos a tratar y ser alojados en el almacén.
 
 Para el caso especifico se utlizaron los motores de base de datos:
--Oracle XE :Puede emplearse como Base de Datos de producción en pequeños negocios(Small Bussiness) tanto en intranets e internet. El soporte se da mediante un foro del mismo Oracle Corp., oracle application express , una herramienta de rápido desarrollo que permite crear aplicaciones web robustas sin necesidad de conocimientos avanzados de programación debido a su entorno declarativo, sin embargo, quienes tengan conocimientos en PL/SQL y en Ajax, pueden potenciar las aplicaciones.
+-***Oracle XE :***Puede emplearse como Base de Datos de producción en pequeños negocios(Small Bussiness) tanto en intranets e internet. El soporte se da mediante un foro del mismo Oracle Corp., oracle application express , una herramienta de rápido desarrollo que permite crear aplicaciones web robustas sin necesidad de conocimientos avanzados de programación debido a su entorno declarativo, sin embargo, quienes tengan conocimientos en PL/SQL y en Ajax, pueden potenciar las aplicaciones.
 
--Postgresql :Sistema de gestión de bases de datos relacional orientado a objetos y de código abierto, publicado bajo la licencia PostgreSQL similar a la BSD o la MIT.
+-***Postgresql :***Sistema de gestión de bases de datos relacional orientado a objetos y de código abierto, publicado bajo la licencia PostgreSQL similar a la BSD o la MIT.
 Como muchos otros proyectos de código abierto, el desarrollo de PostgreSQL no es manejado por una empresa o persona, sino que es dirigido por una comunidad de desarrolladores que trabajan de forma desinteresada, altruista, libre o apoyados por organizaciones comerciales. Dicha comunidad es denominada el PGDG (PostgreSQL Global Development Group).
 Con todas estas características Oracle XE es la base de datos ideal para iniciarse en el mundo de Oracle para desarrollar y distribuir aplicaciones livianas de escritorio y en la Web.
 
@@ -27,7 +27,12 @@ Hoy en día existe en el mercado varias herramientas ETL de diferente proveedor 
 - Soporte de la herramienta para problemas técnicos.
 - Interfaz para implementación de código SQL.
 
-De la misma manera 
+De la misma manera se utlizo ***Pentaho*** ,se define a sí mismo como una plataforma de BI “orientada a la solución” y “centrada en procesos” que incluye todos los principales componentes requeridos para implementar soluciones basadas en procesos tal como ha sido concebido desde el principio.
+Las soluciones que Pentaho pretende ofrecer se componen fundamentalmente de una infraestructura de herramientas de análisis e informes integrado con un motor de workflow de procesos de negocio. La plataforma será capaz de ejecutar las reglas de negocio necesarias, expresadas en forma de procesos, actividades, además es capaz de presentar y entregar la información adecuada en el momento adecuado.
+Su modelo de ingresos parece estar orientado a los servicios (soporte, formación, consultoría y soporte a ISVs y distribuciones OEM) aunque en alguno de los documentos y páginas que hemos examinado se mencionan algunas funcionalidades “Premium” que hacen pensar en ingresos por futuras versiones o funcionalidades de pago.
+
+![](img/pentaho.PNG)
+
 
 ### Herramientas de Presentación
 Como parte de la explotación del DataWarehouse es importante contar con una herramienta que permita brindar una interfaz de usuario final, con facilidades y funcionalidades amigables que permitan una mayor y mejor interpretación de los datos que se encuentran en el Almacén.
