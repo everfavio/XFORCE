@@ -12,7 +12,7 @@ Para el caso especifico se utlizaron los motores de base de datos:
 Como muchos otros proyectos de código abierto, el desarrollo de PostgreSQL no es manejado por una empresa o persona, sino que es dirigido por una comunidad de desarrolladores que trabajan de forma desinteresada, altruista, libre o apoyados por organizaciones comerciales. Dicha comunidad es denominada el PGDG (PostgreSQL Global Development Group).
 Con todas estas características Oracle XE es la base de datos ideal para iniciarse en el mundo de Oracle para desarrollar y distribuir aplicaciones livianas de escritorio y en la Web.
 
-
+![](img/oracle_postgreql.PNG)
 
 ### Herramienta ETL
 Hoy en día existe en el mercado varias herramientas ETL de diferente proveedor ó casa comercial, aparte de esto se debe tomar en cuenta funcionalidades que permitan el buen desarrollo del Proceso ETL para lo cual se formuló características básicas que debe tener un herramienta de este tipo, lo que permite garantizar el trato de los datos.
