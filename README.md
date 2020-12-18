@@ -168,5 +168,15 @@ gráficos y documentos, que proporcionan una gran ayuda para iniciarse en el ám
 
 |  Tema Analitico | Análisis o requerimiento inferido o pedido  |Proceso de negocio o soporte  | Comentarios   |
 | ------------ | ------------ | ------------ | ------------ |
-|   Comprension de los volumenes de Ventas| Análisis cuantitativo - cualitativo| Ventas | Por cliente, por producto, por empleado, por region |
-|  Selección de mejores clientes  | Cliente | La proyección es un proceso de negocio que usa las órdenes como entradas ||
+|   Comprension de los volumenes de Ventas| Análisis cuantitativo - cualitativo| Ventas | Por cliente, por producto, por empleado, por región |
+|  Selección de mejores clientes  | Análisis cuantitativo | Cliente | Por región, por sucursal |
+|  Selección de mejores empleados  | Análisis cuantitativo | Empleado | Por región, por sucursal |
+
+### Modelo Base
+![](img/E_R.png)
+
+### Modelo Dimensional
+![](img/MODELO_DIM.png)
+
+### Diseño Fisico - sistema de Extracción Transformación y Carga (ETL)
+![](img/ETL.png)
