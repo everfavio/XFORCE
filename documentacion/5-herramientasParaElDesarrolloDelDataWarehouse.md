@@ -5,6 +5,15 @@ Por lo que para la creación de la base de datos se debe tomar en cuenta ciertas
 -	Alto Rendimiento y Gestión de datos.
 -	Alta escalabilidad y desempeño para el crecimiento exponencial de datos, lo cual depende mucho de la cantidad de datos a tratar y ser alojados en el almacén.
 
+Para el caso especifico se utlizaron los motores de base de datos:
+-Oracle XE :Puede emplearse como Base de Datos de producción en pequeños negocios(Small Bussiness) tanto en intranets e internet. El soporte se da mediante un foro del mismo Oracle Corp., oracle application express , una herramienta de rápido desarrollo que permite crear aplicaciones web robustas sin necesidad de conocimientos avanzados de programación debido a su entorno declarativo, sin embargo, quienes tengan conocimientos en PL/SQL y en Ajax, pueden potenciar las aplicaciones.
+
+-Postgresql :Sistema de gestión de bases de datos relacional orientado a objetos y de código abierto, publicado bajo la licencia PostgreSQL similar a la BSD o la MIT.
+Como muchos otros proyectos de código abierto, el desarrollo de PostgreSQL no es manejado por una empresa o persona, sino que es dirigido por una comunidad de desarrolladores que trabajan de forma desinteresada, altruista, libre o apoyados por organizaciones comerciales. Dicha comunidad es denominada el PGDG (PostgreSQL Global Development Group).
+Con todas estas características Oracle XE es la base de datos ideal para iniciarse en el mundo de Oracle para desarrollar y distribuir aplicaciones livianas de escritorio y en la Web.
+
+
+
 ### Herramienta ETL
 Hoy en día existe en el mercado varias herramientas ETL de diferente proveedor ó casa comercial, aparte de esto se debe tomar en cuenta funcionalidades que permitan el buen desarrollo del Proceso ETL para lo cual se formuló características básicas que debe tener un herramienta de este tipo, lo que permite garantizar el trato de los datos.
 - Extracción de datos desde archivos planos, hojas de cálculo, bases de datos.
@@ -17,6 +26,8 @@ Hoy en día existe en el mercado varias herramientas ETL de diferente proveedor 
 - Conectividad con diferentes Motores de Base de datos.
 - Soporte de la herramienta para problemas técnicos.
 - Interfaz para implementación de código SQL.
+
+De la misma manera 
 
 ### Herramientas de Presentación
 Como parte de la explotación del DataWarehouse es importante contar con una herramienta que permita brindar una interfaz de usuario final, con facilidades y funcionalidades amigables que permitan una mayor y mejor interpretación de los datos que se encuentran en el Almacén.
