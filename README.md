@@ -92,7 +92,7 @@ El primer paso es elegir el área a modelizar. Esta es una decisión de la direc
 La granularidad significa especificar el nivel de detalle. La elección de la granularidad depende de los requerimientos del negocio y lo que es posible a partir de los datos actuales. La sugerencia general es comenzar a diseñar el DW al mayor nivel de detalle posible, ya que se podría luego realizar agrupamientos al nivel deseado. En caso contrario
 no sería posible abrir (drill-down) las sumarizaciones en caso de que el nivel de detalle no lo permita. 
 
-### 4.3.3 Establecer el nivel de granularidad
+### 4.3.3 Elegir las dimensiones
 Las dimensiones surgen naturalmente de las discusiones del equipo, y facilitadas por la elección del nivel de granularidad y de la matriz de procesos/dimensiones. Las tablas de dimensiones tienen un conjunto de atributos (generalmente textuales) que brindan una perspectiva o forma de análisis sobre una medida en una tabla de hechos.
 Una forma de identificar las tablas de dimensiones es que sus atributos son posibles candidatos para ser encabezado en los informes, tablas pivot, cubos, o cualquier forma de visualización, unidimensional o multidimensional. 
 
@@ -159,3 +159,24 @@ La metodología de Kimball proporciona una base empírica y metodológica adecua
 gráficos y documentos, que proporcionan una gran ayuda para iniciarse en el ámbito de la construcción de un Datawarehouse
 
 
+
+
+------------
+## PASOS CONSECUTIVOS APLICADOS AL PROYECTO 
+
+### - Análisis de Requerimientos
+
+|  Tema Analitico | Análisis o requerimiento inferido o pedido  |Proceso de negocio o soporte  | Comentarios   |
+| ------------ | ------------ | ------------ | ------------ |
+|   Comprension de los volumenes de Ventas| Análisis cuantitativo - cualitativo| Ventas | Por cliente, por producto, por empleado, por región |
+|  Selección de mejores clientes  | Análisis cuantitativo | Cliente | Por región, por sucursal |
+|  Selección de mejores empleados  | Análisis cuantitativo | Empleado | Por región, por sucursal |
+
+### - Modelo Base
+![](img/E_R.png)
+
+### - Modelo Dimensional
+![](img/MODELO_DIM.png)
+
+### - Diseño Fisico -  ETL
+![](img/ETL.png)
