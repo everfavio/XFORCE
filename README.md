@@ -164,7 +164,7 @@ gráficos y documentos, que proporcionan una gran ayuda para iniciarse en el ám
 ------------
 ## PASOS CONSECUTIVOS APLICADOS AL PROYECTO 
 
-### Análisis de Requerimientos
+### - Análisis de Requerimientos
 
 |  Tema Analitico | Análisis o requerimiento inferido o pedido  |Proceso de negocio o soporte  | Comentarios   |
 | ------------ | ------------ | ------------ | ------------ |
@@ -172,11 +172,11 @@ gráficos y documentos, que proporcionan una gran ayuda para iniciarse en el ám
 |  Selección de mejores clientes  | Análisis cuantitativo | Cliente | Por región, por sucursal |
 |  Selección de mejores empleados  | Análisis cuantitativo | Empleado | Por región, por sucursal |
 
-### Modelo Base
+### - Modelo Base
 ![](img/E_R.png)
 
-### Modelo Dimensional
+### - Modelo Dimensional
 ![](img/MODELO_DIM.png)
 
-### Diseño Fisico - sistema de Extracción Transformación y Carga (ETL)
+### - Diseño Fisico -  ETL
 ![](img/ETL.png)
