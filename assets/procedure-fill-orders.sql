@@ -26,15 +26,23 @@ declare _productid integer;
 declare _random_day integer;
 declare _string_date varchar;
 declare _date date;
+declare pais text[];
+declare region text[];
+declare ciudad text[];
+declare num_random integer;
 begin
 count = 0;
+pais = ARRAY['Bolivia', 'Bolivia','Bolivia', 'Bolivia', 'Bolivia', 'Bolivia', 'Peru',  'Peru', 'Peru', 'Chile', 'Chile'];
+region = ARRAY['La Paz', 'La Paz', 'Santa Cruz','Santa cruz', 'Cochabamba','Cochambamba', 'Puno', 'Lima', 'Cusco','Santiago', 'Iquique'];
+ciudad = ARRAY['El Alto','La Paz', 'Santa Cruz', 'Montero', 'Cochabamba', 'Sacaba', 'Puno', 'Lima', 'Pueblito de Cusco', 'Santiago', 'Iquique'];
 LOOP
     -- some computations
-    IF count >= 100000 THEN
+    IF count >= 10000 THEN
         EXIT;  -- exit loop
     END IF;
     -- generando la fechas
     _random_day = round(random() * 24 + 1);
+    num_random = round(random() * 8);
     _string_date = _random_day || '-' || month || '-' || year;
     _date = to_date(_string_date, 'DD-MM-YYYY');
     insert into orders (
@@ -59,12 +67,12 @@ LOOP
       _date + interval '2' day, 
       round(random() * 2 + 1 ),
       round(random() * 99 + 1),
-      'IVAN MUJICA',
-      'LAS DELIZIAS 123',
-      'EL ALTO',
-      'LA PAZ',
+      'Ferando Mujica',
+      'Direccion de prueba',
+      ciudad[num_random],
+      region[num_random],
       '591',
-      'BOLIVIA'
+      pais[num_random]
     ) returning orderid INTO _orderid_creado;
     RAISE INFO '---------->>orden % creadas', _orderid_creado ;
     -- para detalles
@@ -108,6 +116,5 @@ LOOP
   END;
 $$ language plpgsql;
 
-select fill_orders(2, 2020); 
+select fill_orders(5, 2020); 
 select count(*) from public.orders;
-
