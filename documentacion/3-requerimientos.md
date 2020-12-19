@@ -4,3 +4,9 @@
 ------------- | -------------
 |Ventas por dimensiones  | Análisis historico de ventas y ordenes  | Ordenes de Compra/Venta | Por cliente, por país, por región de ventas |
 |Content Cell  | Content Cell  |
+
+
+| First Header  | Second Header |
+| ------------- | ------------- |
+| Content Cell  | Content Cell  |
+| Content Cell  | Content Cell  |
