@@ -3,7 +3,8 @@ Inicialmente se tiene una base de datos que será el sujeto de estudio, se eligi
 
 #### Esquemas
 Los esquemas definidos para las operaciones son:
-PostgreSQL
+
+PostgreSQL:
   - Public: Esquema donde se encuentran definidas las tablas transaccionales
   - Stage: Esquema donde se encuentran definidas las tablas de conversión al esqueman star
   - Star: Esquema que contiene las tablas dimensionales y de hechos que almacenan toda la información procesada resultantes.
