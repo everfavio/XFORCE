@@ -6,7 +6,7 @@
 |Content Cell  | Content Cell  |
 
 
-| First Header  | Second Header | First Header | First Header |
+| Tema Analítico | Análisis sobre ventas por dimensiones y ordenes | Proceso de negocio | Comentarios |
 | ------------- | ------------- | ------------ | ------------ |
-| Content Cell  | Content Cell  | Content Cell | Content Cell |
+| Ventas por dimensiones  | Análisis historico de ventas y ordenes  | Ordenes de Compra/Venta | Por cliente, por país, por región de ventas |
 | Content Cell  | Content Cell  | Content Cell | Content Cell |
