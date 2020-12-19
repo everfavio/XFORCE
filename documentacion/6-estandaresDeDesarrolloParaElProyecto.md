@@ -4,9 +4,9 @@ Los Nombres de la Tablas para su creación mantendrán el siguiente estándar::
 
 <TIPO>_<NOMBRE>_[NEGOCIO]
 
-<TIPO>: El tipo describe si la tabla es Dimensión, Hecho u otro.
+<TIPO> : El tipo describe si la tabla es Dimensión, Hecho u otro.
 
-<NOMBRE>: Describe el nombre de la tabla.
+<NOMBRE> : Describe el nombre de la tabla.
 
 [NEGOCIO]: Especifica si fuese necesario el nombre del negocio al que pertenece la tabla.
 
