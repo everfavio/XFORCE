@@ -152,31 +152,13 @@ Los informes estándar son la base del espectro de aplicaciones de BI. Por lo ge
 Son informes que los usuarios usan día a día. La mayor parte de lo que piden las personas durante el proceso de definición de requisitos se clasificaría como informes estándar. Por eso es conveniente desarrollar un conjunto de informes estándar en el ciclo de vida del proyecto.
 
 ### 4.6.2 Aplicaciones Analíticas
-Las aplicaciones analíticas son más complejas que los informes estándar. Normalmente se centran en un proceso de negocio específico y resumen cierta experiencia acerca de cómo analizar e interpretar ese proceso de negocio. Estas aplicaciones pueden ser muy avanzadas e incluir algoritmos y modelos de minería de datos, que ayudan a identificar oportunidades o cuestiones subyacentes en los datos. Otra característica avanzada en algunas aplicaciones analíticas es que el usuario puede pedir cambios en los sistemas transaccionales basándose en los conocimientos obtenidos del uso de la aplicación de BI. En el otro extremo del espectro, algunas aplicaciones analíticas se venden como soluciones cerradas o enlatados, y son independientes de las aplicaciones particulares de la empresa. 
+Las aplicaciones analíticas son más complejas que los informes estándar. Normalmente se centran en un proceso de negocio específico y resumen cierta experiencia acerca de cómo analizar e interpretar ese proceso de negocio. Estas aplicaciones pueden ser muy avanzadas e incluir algoritmos y modelos de minería de datos, que ayudan a identificar oportunidades o cuestiones subyacentes en los datos. Otra característica avanzada en algunas aplicaciones analíticas es que el usuario puede pedir cambios en los sistemas transaccionales basándose en los conocimientos obtenidos del uso de la aplicación de BI. En el otro extremo del espectro, algunas aplicaciones analíticas se venden como soluciones cerradas o enlatados, y son independientes de las aplicaciones particulares de la empresa.
 
-### 4.6.2 Conclusiones
-La metodología de Kimball proporciona una base empírica y metodológica adecuada para las implementaciones de almacenes de datos pequeños y medianos, dada su gran versatilidad y su enfoque ascendente, que permite construir los almacenes en forma escalonada. Además presenta una serie de herramientas, tales como planillas,
-gráficos y documentos, que proporcionan una gran ayuda para iniciarse en el ámbito de la construcción de un Datawarehouse
-
-
-
-
-------------
-## PASOS CONSECUTIVOS APLICADOS AL PROYECTO 
-
-### - Análisis de Requerimientos
-
-|  Tema Analitico | Análisis o requerimiento inferido o pedido  |Proceso de negocio o soporte  | Comentarios   |
-| ------------ | ------------ | ------------ | ------------ |
-|   Comprension de los volumenes de Ventas| Análisis cuantitativo - cualitativo| Ventas | Por cliente, por producto, por empleado, por región |
-|  Selección de mejores clientes  | Análisis cuantitativo | Cliente | Por región, por sucursal |
-|  Selección de mejores empleados  | Análisis cuantitativo | Empleado | Por región, por sucursal |
-
-### - Modelo Base
+<!-- ### - Modelo Base
 ![](img/E_R.png)
 
 ### - Modelo Dimensional
 ![](img/MODELO_DIM.png)
 
 ### - Diseño Fisico -  ETL
-![](img/ETL.png)
+![](img/ETL.png) -->
