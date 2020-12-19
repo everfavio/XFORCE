@@ -10,7 +10,7 @@ Los Nombres de la Tablas para su creación mantendrán el siguiente estándar::
 
 [NEGOCIO]: Especifica si fuese necesario el nombre del negocio al que pertenece la tabla.
 
-ara la creación de los mismos puede referirse [aca](/0-acreacion-schemas "enlace")
+Para la creación de los mismos puede referirse [aca](/0-acreacion-schemas "enlace")
 
 ### Estándares de Campos
 Para los campos no se realizará ningún tipo de especificación para los nombres debido a la variedad que pueden tener pero básicamente mantendrá un estándar como se muestra a continuación:
