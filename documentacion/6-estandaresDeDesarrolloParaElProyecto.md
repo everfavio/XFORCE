@@ -2,7 +2,7 @@
 ### Estándares de Tablas
 Los Nombres de la Tablas para su creación mantendrán el siguiente estándar::
 
-[TIPO]__[NOMBRE]__[NEGOCIO]
+[TIPO] _ [NOMBRE]_ _ [NEGOCIO]
 
 [TIPO]: El tipo describe si la tabla es Dimensión, Hecho u otro.
 
