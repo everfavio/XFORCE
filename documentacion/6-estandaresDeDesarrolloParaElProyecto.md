@@ -1,4 +1,4 @@
-#6. Estándares de Desarrollo para el Proyecto
+# 6. Estándares de Desarrollo para el Proyecto
 ### Estándares de Tablas
 Los Nombres de la Tablas para su creación mantendrán el siguiente estándar::
 
