@@ -13,7 +13,7 @@ Para tal caso se observan las siguientes dimensiones:
 
 - dim_producto : Dimension producto, señala la caraterización propia de los distintos y variados productos dentro el sistema mismo.
 
-- fact_orden : Tabla de hechos, la transaccional donde se reflejan los movimientos e interacciones entre las diferentes dimensiones.
+- fact_orden : Tabla de hechos, la transaccional donde se reflejan los movimientos e interacciones entre las diferentes dimensiones, proveyendo las ordenes realizadas de los clientes sobre los diferentes productos, incluyendo su forma de distribucion.
 
 
 
