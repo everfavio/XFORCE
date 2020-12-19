@@ -18,7 +18,7 @@ Con todas estas características Oracle XE es la base de datos ideal para inicia
 Hoy en día existe en el mercado varias herramientas ETL de diferente proveedor ó casa comercial, aparte de esto se debe tomar en cuenta funcionalidades que permitan el buen desarrollo del Proceso ETL para lo cual se formuló características básicas que debe tener un herramienta de este tipo, lo que permite garantizar el trato de los datos.
 - Extracción de datos desde archivos planos, hojas de cálculo, bases de datos.
 - Carga de datos de forma masiva en bases de datos.
-- Limpieza de datos. 
+- Limpieza de datos.
 - Interfaz gráfica amigable.
 -	Unificar Datos
 - Seguridad de la información transmitida.
