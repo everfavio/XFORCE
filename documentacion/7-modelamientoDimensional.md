@@ -9,11 +9,11 @@ Para tal caso se observan las siguientes dimensiones:
 
 - dim repartidor : Dimension repartidor, provee el detalle de distribución mediante entes ya sean granulares o de mayor capacidad, para con los productos.
 
--dim_geografia : Dimension geografia, especifica los puntos geograficos sobre los que interactuan las demas dimensiones.
+- dim_geografia : Dimension geografia, especifica los puntos geograficos sobre los que interactuan las demas dimensiones.
 
--dim_producto : Dimension producto, señala la caraterización propia de los distintos y variados productos dentro el sistema mismo.
+- dim_producto : Dimension producto, señala la caraterización propia de los distintos y variados productos dentro el sistema mismo.
 
--fact_orden : Tabla de hechos, la transaccional donde se reflejan los movimientos e interacciones entre las diferentes dimensiones.
+- fact_orden : Tabla de hechos, la transaccional donde se reflejan los movimientos e interacciones entre las diferentes dimensiones.
 
 
 
