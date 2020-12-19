@@ -1,6 +1,6 @@
 
 # 7. Modelamiento Dimensional
-Para tal caso se observan las siguientes dimensiones:
+Para tal caso se observan las siguientes dimensiones, hechos:
 - dim_tiempo : Dimension tiempo contiene lo referido a las diferentes variantes de tiempo en todos sus casos posibles.
 
 - dim_cliente : Dimension cliente, especifica los datos de los potenciales clientes y sus atributos propios que los identifica en el ambito de estudio.
