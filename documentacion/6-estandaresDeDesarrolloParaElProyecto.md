@@ -29,8 +29,10 @@ Para las funciones y procedimientos almacenados se utlizo la notacion underscore
 [DESCRIPCION] – [DESCRIPCION_2]: Especifica si fuese necesario una descripción abreviada corta.
 [NOMBRE_CAMPO_EN_MINUSCULAS]: Especifica el Nombre del Campo en letra minuscula.
 
-Para la creación de los mismos puede referirse [aca](/1-etl-copia-tablas "enlace")/n
-Para la creación de los mismos puede referirse [aca](/2-etl-cargado-stage-stage "enlace")/n
+Para la creación de los mismos puede referirse [aca](/1-etl-copia-tablas "enlace")
+
+Para la creación de los mismos puede referirse [aca](/2-etl-cargado-stage-stage "enlace")
+
 Para la creación de los mismos puede referirse [aca](/3-etl-cargado-star "enlace")
 
 ### Estándares ETL
@@ -41,5 +43,7 @@ En cuanto a ETL se utlizo la notacion underscore manteniendo las minusculas como
 [NOMBRE_CAMPO_EN_MINUSCULAS]: Especifica el Nombre del Campo en letra minuscula..
 
 Para la creación de los mismos puede referirse [aca](/1-etl-copia-tablas "enlace")
+
 Para la creación de los mismos puede referirse [aca](/2-etl-cargado-stage-stage "enlace")
+
 Para la creación de los mismos puede referirse [aca](/3-etl-cargado-star "enlace")
