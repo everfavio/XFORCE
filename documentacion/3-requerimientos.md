@@ -6,7 +6,7 @@
 |Content Cell  | Content Cell  |
 
 
-| First Header  | Second Header | First Header |
-| ------------- | ------------- | ------------ |
-| Content Cell  | Content Cell  | Content Cell |
-| Content Cell  | Content Cell  | Content Cell |
+| First Header  | Second Header | First Header | First Header |
+| ------------- | ------------- | ------------ | ------------ |
+| Content Cell  | Content Cell  | Content Cell | Content Cell |
+| Content Cell  | Content Cell  | Content Cell | Content Cell |
