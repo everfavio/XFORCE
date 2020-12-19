@@ -9,4 +9,4 @@ Parte pública y presentable del Data Warehouse, en la cual se implementa las ap
 
 En esta etapa, el entregable es Diseño de la Arquitectura de todo el proceso de integración de los datos y de la presentación de los mismos, con el fin de obtener un esquema gráfico del funcionamiento del Data Warehouse.
 
-![](img/ETL.PNG)
+![](img/ETL.png)
