@@ -1,5 +1,6 @@
 # MAESTRÍA EN CIENCIA DE DATOS V.2
-# PROYECTO FINAL DE MÓDULO (Almacenes de datos, Diciembre 2020)
+# PROYECTO FINAL DEL MÓDULO ALMACENES DE DATOS)
+#### La Paz, Diciembre 2020
 ![](img/img1.jpg)
 
 # DOCENTE:
