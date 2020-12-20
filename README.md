@@ -2,7 +2,9 @@
 # PROYECTO FINAL DE MÓDULO (Almacenes de datos, Diciembre 2020)
 ![](img/img1.jpg)
 
-# TEAM X-FORCE
+# DOCENTE:
+    M. Sc. Fernando Terrazas
+# TEAM X-FORCE:
   - Ever Favio Argollo Ticona
   - Ivan Fernando Mujica Mamani
   - Guery Favio Ramirez Martinez
