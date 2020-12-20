@@ -1,6 +1,6 @@
 # 3. Requerimientos
 
-visto ...<relleno>... se diagnostican las siguienten necesidades:
+Visto el objetivo de la aplicación que genera la información y los objetivos se diagnostican las siguienten necesidades:
 
 
 | Tema Analítico | Análisis o requerimiento inferido o pedido | Proceso de negocio | Comentarios |
