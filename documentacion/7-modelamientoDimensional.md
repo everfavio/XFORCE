@@ -1,4 +1,4 @@
-
+[##### <-volver al índice](../README.md#indice)
 # 7. Modelamiento Dimensional
 
 Modelado dimensional (DM en inglés) nombra un conjunto de técnicas y conceptos utilizados en el diseño de almacenes de datos. Se considera que es diferente del Modelo entidad-relación. El modelado de dimensiones no implica necesariamente una base de datos relacional, el mismo enfoque de modelado, a nivel lógico, se puede utilizar para cualquier forma física, tal como archivos de base de datos multidimensional o planas. Según el consultor de almacenamiento de datos Ralph Kimball, 1 el modelado dimensional es una técnica de diseño de bases de datos destinadas a apoyar a las consultas de los usuarios finales en un almacén de datos. Se orienta en torno a la comprensibilidad y rendimiento. Según él, aunque el modelo entidad relacional orientado a transacciones es muy útil para la captura de transacción, se debe evitar en la entrega al usuario final.
@@ -25,3 +25,5 @@ Para el caso analizado se observan las siguientes dimensiones, hechos:
 
 
 ![](img/start.png)
+
+[##### <-volver al índice](../README.md#indice)
