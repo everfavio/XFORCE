@@ -1,4 +1,4 @@
-[##### <-volver al índice](../README.md#indice)
+[<-volver al índice](../README.md#indice)
 # 8. Base de Datos
 
 Una base de datos es un conjunto de datos pertenecientes a un mismo contexto y almacenados sistemáticamente para su uso posterior. En este sentido; una biblioteca puede considerar una base de datos compuesta en su mayoría por documentos y textos impresos en papel e indexados para su consulta. Actualmente, y debido al desarrollo tecnológico de campos como la informática y la electrónica, la mayoría de las bases de datos están en formato digital, siendo este un componente electrónico, por tanto se ha desarrollado y se ofrece un amplio rango de soluciones al problema del almacenamiento de datos.
@@ -27,4 +27,4 @@ a parte de las tablas definidas para el proceso de ETL se utilizará una única 
 - [Tablas del esquema Stage](./9.1-schema-public.md)
 - [Tablas del esquema Star](./9.1-schema-public.md)
 
-[##### <-volver al índice](../README.md#indice)
+[<-volver al índice](../README.md#indice)

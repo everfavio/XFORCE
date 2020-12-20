@@ -1,4 +1,4 @@
-[##### <-volver al índice](../README.md#indice)
+[<-volver al índice](../README.md#indice)
 # 5. Herramientas para el Desarrollo del DataWarhouse
 ### Motores de Bases de Datos
 Como se apreció hasta el momento un DataWarehouse es un almacén, y desde el punto de vista técnico es una base de datos con cualidades y características especificas de rendimiento. Es por ello la importancia de una Base de Datos para una aplicación de este tipo, ya que es la base, y el núcleo en el cual reposarán los datos que previamente han sido tratados.
@@ -48,4 +48,4 @@ Por lo que es recomendable que para la selección de una herramienta de este tip
 
 En cuanto a las herramientas de presentación se utilizaron ***POWER BI*** , y  ***KNOWAGE***; la primera proporciona servicios de BI basados en la nube, conocidos como “Power BI Services”, junto con una interfaz basada en escritorio, denominada “Power BI Desktop”. Ofrece capacidades de almacenamiento de datos, incluyendo preparación de datos, descubrimiento de datos y paneles interactivos, la segunda referida de código abierto para análisis de negocios modernos sobre fuentes tradicionales y sistemas de big data. Knowage es la nueva marca del proyecto SpagoBI: esta nueva marca el valor de la conocida suite de inteligencia empresarial de código abierto después de importantes transformaciones funcionales y tecnológicas y un nuevo modelo de oferta. La suite se compone de varios módulos, cada uno concebido para un dominio analítico específico. Se pueden utilizar individualmente como solución completa para una determinada tarea o combinarse entre sí para garantizar una cobertura total de los requisitos del usuario.
 
-[##### <-volver al índice](../README.md#indice)
+[<-volver al índice](../README.md#indice)

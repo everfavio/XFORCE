@@ -1,4 +1,4 @@
-[##### <-volver al índice](../README.md#indice)
+[<-volver al índice](../README.md#indice)
 # 4. Diseño Técnico de la Arquitectura
 Se detalla el ambiente de integración, junto con las tecnologias a utilizar, y el cómo va a funcionar, uniendo tres factores que son: los requerimientos, el entorno técnico, y las estrategias de diseño a implementar.
 Para determinar el diseño técnico se basará en dos divisiones que son:
@@ -13,4 +13,4 @@ En esta etapa, el entregable es Diseño de la Arquitectura de todo el proceso de
 
 ![](img/ETL.png)
 
-[##### <-volver al índice](../README.md#indice)
+[<-volver al índice](../README.md#indice)

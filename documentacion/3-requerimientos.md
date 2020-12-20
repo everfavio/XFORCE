@@ -1,4 +1,4 @@
-[##### <-volver al índice](../README.md#indice)
+[<-volver al índice](../README.md#indice)
 # 3. Requerimientos
 
 
@@ -12,4 +12,4 @@
 
 
 
-[##### <-volver al índice](../README.md#indice)
+[<-volver al índice](../README.md#indice)
