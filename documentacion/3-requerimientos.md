@@ -1,7 +1,5 @@
 # 3. Requerimientos
 
-Visto el objetivo de la aplicación que genera la información y los objetivos se diagnostican las siguienten necesidades:
-
 
 | Tema Analítico | Análisis o requerimiento inferido o pedido | Proceso de negocio | Comentarios |
 | ------------- | ------------- | ------------ | ------------ |
