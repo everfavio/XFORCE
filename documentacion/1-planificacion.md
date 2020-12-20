@@ -9,9 +9,3 @@ Esta tarea incluye las siguientes acciones típicas de un plan de proyecto:
 -  Planificar el uso de los recursos.
 -  Asignar la carga de trabajo a los recursos
 -  Elaboración de un documento final que representa un plan del proyecto.
-
-Además en esta parte se define cómo realizar la administración o gestión de esta subfase que es todo un proyecto en si mismo, con las siguientes actividades:
-
-- Monitoreo del estado de los procesos y actividades.
-- Rastreo de problemas.
-- Desarrollo de una plan de comunicación comprensiva que direcciones la empresa y las áreas de TI.
