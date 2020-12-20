@@ -23,8 +23,8 @@ Oracle:
 ### Tablas
 a parte de las tablas definidas para el proceso de ETL se utilizará una única tabla de Auditoria, para el registro de eventos generados cada ves que se realize el proceso de migración.
 
-- [Tablas del esquema Public/ventas]()
-- [Tablas del esquema Stage]()
-- [Tablas del esquema Star]()
+- [Tablas del esquema Public/ventas](./9.1-schema-public.md)
+- [Tablas del esquema Stage](./9.1-schema-public.md)
+- [Tablas del esquema Star](./9.1-schema-public.md)
 
 [##### <-volver al índice](../README.md#indice)
