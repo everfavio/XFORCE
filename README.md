@@ -3,7 +3,7 @@
 ![](img/img1.jpg)
 
 # DOCENTE:
-    M. Sc. Fernando Terrazas
+M. Sc. Fernando Terrazas
 # TEAM X-FORCE:
   - Ever Favio Argollo Ticona
   - Ivan Fernando Mujica Mamani
