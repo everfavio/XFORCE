@@ -33,11 +33,11 @@ Los almacenes de datos cada dia adquieren mayor importancia, a medida que las or
 
 [9. Diseño y Desarrollo del Proceso ETL](./documentacion/10.disenioDesarrolloProcesoETL.md)
 
-[10. Diseño e implementación con PowerBI](./documentacion/11.disenioDesarrolloAppBI.md)
+[10. Diseño e implementación con Knowage](./documentacion/11.ImplementacionKnowage.md)
 
-[11. Diseño e implementación con Knowage](./documentacion/11.1.ImplementacionKnowage.md)
+[11. Diseño e implementación con PowerBI](./documentacion/12.disenioDesarrolloAppBI.md)
 
-[12. Conclusiones](./documentacion/12.conclusiones.md)
+[12. Conclusiones](./documentacion/13.conclusiones.md)
 
 Extra:
 
