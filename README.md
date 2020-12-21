@@ -19,27 +19,25 @@ Los almacenes de datos cada dia adquieren mayor importancia, a medida que las or
 
 [2. Planificación](./documentacion/1-planificacion.md)
 
-[3. Linea del Negocio](./documentacion/2-lineaNegocio.md)
+[3. Requerimientos](./documentacion/3-requerimientos.md)
 
-[4. Requerimientos](./documentacion/3-requerimientos.md)
+[4. Diseño Técnico de la arquitectura](./documentacion/4-disenioTecnicoDeLaArquitectura.md)
 
-[5. Diseño Técnico de la arquitectura](./documentacion/4-disenioTecnicoDeLaArquitectura.md)
+[5. Herramientas para el desarrollo del DataWareHouse](./documentacion/5-herramientasDesarrolloDataWarehouse.md)
 
-[6. Herramientas para el desarrollo del DataWareHouse](./documentacion/5-herramientasDesarrolloDataWarehouse.md)
+[6. Estándares de desarrollo para el proyecto](./documentacion/6-estandaresDeDesarrolloParaElProyecto.md)
 
-[7. Estándares de desarrollo para el proyecto](./documentacion/6-estandaresDeDesarrolloParaElProyecto.md)
+[7. Modelamiento dimensional](./documentacion/7-modelamientoDimensional.md)
 
-[8. Modelamiento dimensional](./documentacion/7-modelamientoDimensional.md)
+[8. Base de Datos](./documentacion/9-baseDeDatos.md)
 
-[9. Base de Datos](./documentacion/9-baseDeDatos.md)
+[9. Diseño y Desarrollo del Proceso ETL](./documentacion/10.disenioDesarrolloProcesoETL.md)
 
-[10. Diseño y Desarrollo del Proceso ETL](./documentacion/10.disenioDesarrolloProcesoETL.md)
+[10. Diseño e implementación con PowerBI](./documentacion/11.disenioDesarrolloAppBI.md)
 
-[11. Diseño y Desarrollo de la app BI](./documentacion/11.disenioDesarrolloAppBI.md)
+[11. Diseño e implementación con Knowage](./documentacion/11.1.ImplementacionKnowage.md)
 
-[12 Implementación con Knowage](./documentacion/11.1.ImplementacionKnowage.md)
-
-[13. Conclusiones](./documentacion/12.conclusiones.md)
+[12. Conclusiones](./documentacion/12.conclusiones.md)
 
 Extra:
 
