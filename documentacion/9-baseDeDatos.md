@@ -7,7 +7,7 @@ Hay programas denominados sistemas gestores de bases de datos, abreviado SGBD (d
 
 Inicialmente se tiene una base de datos que será el sujeto de estudio, se eligieron PostgreSQL y ORACLE como DBMS.
 
-![](img/orders_db.PNG)
+![](img/orders_db.png)
 
 ### Esquemas
 Los esquemas definidos para las operaciones son:
@@ -19,8 +19,6 @@ PostgreSQL:
 
 Oracle:
   - Ventas: Esquema donde se encuentran definidas las tablas transaccionales
-  - Stage: Esquema donde se encuentran definidas las tablas de conversión al esqueman star
-  - Star: Esquema que contiene las tablas dimensionales y de hechos que almacenan toda la información procesada
 
 ### Tablas
 a parte de las tablas definidas para el proceso de ETL se utilizará una única tabla de Auditoria, para el registro de eventos generados cada ves que se realize el proceso de migración.
