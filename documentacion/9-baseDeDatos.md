@@ -7,7 +7,7 @@ Hay programas denominados sistemas gestores de bases de datos, abreviado SGBD (d
 
 Inicialmente se tiene una base de datos que será el sujeto de estudio, se eligieron PostgreSQL y ORACLE como DBMS.
 
-![](img/orders_db.PNG)
+![](img/orders_db.png)
 
 ### Esquemas
 Los esquemas definidos para las operaciones son:
