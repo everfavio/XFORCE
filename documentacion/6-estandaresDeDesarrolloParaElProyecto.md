@@ -1,7 +1,6 @@
 [<-volver al índice](../README.md#indice)
 # 6. Estándares de Desarrollo para el Proyecto
 ### Convenciones de nombramiento
-
 En programación de computadoras, una convención de nomenclatura es un conjunto de reglas para elegir la secuencia de caracteres que se utilizará para identificadores que denotan variables, tipos, funciones y otras entidades en el código fuente y la documentación.
 
 Las razones para usar una convención de nomenclatura (en lugar de permitir que los programadores elijan cualquier secuencia de caracteres) incluyen las siguientes:
