@@ -73,29 +73,29 @@ as $$
     coalesce(
       (select idw_cliente
       from star.dim_cliente
-      where id_cliente = o.customerid
+      where id_cliente = o.customerid limit 1
     ), -1 ) idw_cliente,
     coalesce(
       (select idw_empleado
       from star.dim_empleado
-      where id_empleado = o.employeeid
+      where id_empleado = o.employeeid limit 1
     ), -1 ) idw_empleado,
     coalesce(
       (select idw_repartidor
       from star.dim_repartidor
-      where id_repartidor = o.shipvia
+      where id_repartidor = o.shipvia limit 1
     ), -1 ) idw_repartidor,
     coalesce(
       (select idw_producto
       from star.dim_producto
-      where id_producto = od.productid
+      where id_producto = od.productid limit 1
     ), -1 ) idw_producto,
     coalesce(
       (select idw_geografia
       from star.dim_geografia
       where trim(upper(ciudad)) = trim(upper(o.shipcity))
       and  trim(upper(region)) = trim(upper(o.shipregion))
-      and  trim(upper(pais)) = trim(upper(o.shipcountry))
+      and  trim(upper(pais)) = trim(upper(o.shipcountry)) limit 1
     ), -1 ) idw_geografia,
     o.orderdate::date,
     o.requireddate::date,

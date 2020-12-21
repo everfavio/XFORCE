@@ -19,7 +19,7 @@ inner join star.dim_tiempo t3 on t3.fecha = o.fecha_entrega
 inner join star.dim_cliente c on c.idw_cliente = o.idw_cliente
 inner join star.dim_empleado e  on e.idw_empleado = o.idw_empleado
 
-
+select distinct idw_geografia from star.fact_orden;
 
 \d star.dim_producto
 \d star.fact_orden

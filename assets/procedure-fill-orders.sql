@@ -34,15 +34,18 @@ begin
 count = 0;
 pais = ARRAY['Bolivia', 'Bolivia','Bolivia', 'Bolivia', 'Bolivia', 'Bolivia', 'Peru',  'Peru', 'Peru', 'Chile', 'Chile'];
 region = ARRAY['La Paz', 'La Paz', 'Santa Cruz','Santa cruz', 'Cochabamba','Cochambamba', 'Puno', 'Lima', 'Cusco','Santiago', 'Iquique'];
-ciudad = ARRAY['El Alto','La Paz', 'Santa Cruz', 'Montero', 'Cochabamba', 'Sacaba', 'Puno', 'Lima', 'Pueblito de Cusco', 'Santiago', 'Iquique'];
+ciudad = ARRAY['El Alto','La Paz', 'Santa Cruz', 'Montero', 'Cochabamba', 'Sacaba', 'Puno', 'Lima', 'Cusquito', 'Santiago', 'Iquique'];
 LOOP
     -- some computations
-    IF count >= 10000 THEN
+    IF count >= 1000 THEN
         EXIT;  -- exit loop
     END IF;
     -- generando la fechas
     _random_day = round(random() * 24 + 1);
-    num_random = round(random() * 8);
+    num_random = round(random() * 10 + 1);
+    if num_random = 0 then 
+      num_random = 1;
+    end if;
     _string_date = _random_day || '-' || month || '-' || year;
     _date = to_date(_string_date, 'DD-MM-YYYY');
     insert into orders (
@@ -116,5 +119,122 @@ LOOP
   END;
 $$ language plpgsql;
 
-select fill_orders(5, 2020); 
+
+select * from public.orders;
+
+select fill_orders(1, 1996); 
+select fill_orders(2, 1996); 
+select fill_orders(3, 1996); 
+select fill_orders(4, 1996); 
+select fill_orders(5, 1996); 
+select fill_orders(6, 1996); 
+select fill_orders(7, 1996); 
+select fill_orders(8, 1996); 
+select fill_orders(9, 1996); 
+select fill_orders(1, 1997); 
+select fill_orders(2, 1997); 
+select fill_orders(3, 1997); 
+select fill_orders(4, 1997); 
+select fill_orders(5, 1997); 
+select fill_orders(6, 1997); 
+select fill_orders(7, 1997); 
+select fill_orders(8, 1997); 
+select fill_orders(9, 1997); 
+select fill_orders(1, 1998); 
+select fill_orders(2, 1998); 
+select fill_orders(3, 1998); 
+select fill_orders(4, 1998); 
+select fill_orders(5, 1998); 
+select fill_orders(6, 1998); 
+select fill_orders(7, 1998); 
+select fill_orders(8, 1998); 
+select fill_orders(9, 1998); 
+select fill_orders(1, 1999); 
+select fill_orders(2, 1999); 
+select fill_orders(3, 1999); 
+select fill_orders(4, 1999); 
+select fill_orders(5, 1999); 
+select fill_orders(6, 1999); 
+select fill_orders(7, 1999); 
+select fill_orders(8, 1999); 
+select fill_orders(9, 1999); 
+select fill_orders(1, 2000); 
+select fill_orders(2, 2000); 
+select fill_orders(3, 2000); 
+select fill_orders(4, 2000); 
+select fill_orders(5, 2000); 
+select fill_orders(7, 2000); 
+select fill_orders(8, 2000); 
+select fill_orders(9, 2000); 
+select fill_orders(1, 2001); 
+select fill_orders(2, 2001); 
+select fill_orders(3, 2001); 
+select fill_orders(4, 2001); 
+select fill_orders(5, 2001); 
+select fill_orders(6, 2001); 
+select fill_orders(7, 2001); 
+select fill_orders(8, 2001); 
+select fill_orders(9, 2001); 
+select fill_orders(1, 2002); 
+select fill_orders(2, 2002); 
+select fill_orders(3, 2002); 
+select fill_orders(4, 2002); 
+select fill_orders(5, 2002); 
+select fill_orders(6, 2002); 
+select fill_orders(7, 2002); 
+select fill_orders(8, 2002); 
+select fill_orders(9, 2002); 
+select fill_orders(1, 2003); 
+select fill_orders(2, 2003); 
+select fill_orders(3, 2003); 
+select fill_orders(4, 2003); 
+select fill_orders(5, 2003); 
+select fill_orders(6, 2003); 
+select fill_orders(7, 2003); 
+select fill_orders(8, 2003); 
+select fill_orders(9, 2003); 
+select fill_orders(1, 2004); 
+select fill_orders(2, 2004); 
+select fill_orders(3, 2004); 
+select fill_orders(4, 2004); 
+select fill_orders(5, 2004); 
+select fill_orders(6, 2004); 
+select fill_orders(7, 2004); 
+select fill_orders(8, 2004); 
+select fill_orders(9, 2004); 
+select fill_orders(1, 2005); 
+select fill_orders(2, 2005); 
+select fill_orders(3, 2005); 
+select fill_orders(4, 2005); 
+select fill_orders(5, 2005); 
+select fill_orders(6, 2005); 
+select fill_orders(7, 2005); 
+select fill_orders(8, 2005); 
+select fill_orders(9, 2005); 
+select fill_orders(1, 2006); 
+select fill_orders(2, 2006); 
+select fill_orders(3, 2006); 
+select fill_orders(4, 2006); 
+select fill_orders(5, 2006); 
+select fill_orders(6, 2006); 
+select fill_orders(7, 2006); 
+select fill_orders(8, 2006); 
+select fill_orders(9, 2006); 
+select fill_orders(1, 2007); 
+select fill_orders(2, 2007); 
+select fill_orders(3, 2007); 
+select fill_orders(4, 2007); 
+select fill_orders(5, 2007); 
+
+
+
 select count(*) from public.orders;
+select count(*) from public.orderdetails;
+truncate table  public.orders cascade;
+truncate table  public.orderdetails cascade;
+select * from public.orders where shipregion is null;
+
+select * from stage_star_fact_orden where idw_geografia = -1;
+select * from stage_star_dim_geografia;
+select * from star.dim_geografia;
+

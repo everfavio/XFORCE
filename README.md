@@ -37,7 +37,9 @@ Los almacenes de datos cada dia adquieren mayor importancia, a medida que las or
 
 [11. Diseño y Desarrollo de la app BI](./documentacion/11.disenioDesarrolloAppBI.md)
 
-[12. Conclusiones](./documentacion/12.conclusiones.md)
+[12 Implementación con Knowage](./documentacion/11.1.ImplementacionKnowage.md)
+
+[13. Conclusiones](./documentacion/12.conclusiones.md)
 
 Extra:
 

@@ -98,12 +98,12 @@ select three_etl_star_dim_repartidor();
 
 **IMPOTANTISIMO** colocar las fechas correctas 
 ```sql
-select two_etl_stage_fact_order('2020-02-01'::date, '2020-02-28'::date);
+select two_etl_stage_fact_order('1993-02-01'::date, '2020-02-28'::date);
 ```
 #### llenado fact star FINAL
 **IMPOTANTISIMO** colocar las fechas correctas, las mismas de arriba 
 ```sql
-select three_etl_fact_order('2020-02-01'::date, '2020-02-28'::date);
+select three_etl_fact_order('1993-02-01'::date, '2020-02-28'::date);
 ```
 
 ### verificaciones
