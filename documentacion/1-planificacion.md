@@ -7,8 +7,6 @@ Esta tarea incluye las siguientes acciones típicas de un plan de proyecto:
 -  Definir el alcance (entender los requerimientos del negocio).
 -  Identificar las tareas
 -  Programar las tareas
--  Planificar el uso de los recursos.
 -  Asignar la carga de trabajo a los recursos
--  Elaboración de un documento final que representa un plan del proyecto.
 
 [<-volver al índice](../README.md#indice)
