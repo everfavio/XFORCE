@@ -27,9 +27,9 @@ Los almacenes de datos cada dia adquieren mayor importancia, a medida que las or
 
 [6. Estándares de desarrollo para el proyecto](./documentacion/6-estandaresDeDesarrolloParaElProyecto.md)
 
-[7. Modelamiento dimensional](./documentacion/7-modelamientoDimensional.md)
+[7. Base de Datos](./documentacion/9-baseDeDatos.md)
 
-[8. Base de Datos](./documentacion/9-baseDeDatos.md)
+[8. Modelamiento dimensional](./documentacion/7-modelamientoDimensional.md)
 
 [9. Diseño y Desarrollo del Proceso ETL](./documentacion/10.disenioDesarrolloProcesoETL.md)
 
